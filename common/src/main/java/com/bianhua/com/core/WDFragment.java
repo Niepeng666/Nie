@@ -10,6 +10,7 @@ import com.google.gson.Gson;
 import com.bianhua.com.bean.UserInfo;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -29,7 +30,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 public abstract class WDFragment extends Fragment {
-
+	public Context context;
 	public Gson mGson = new Gson();
 	public SharedPreferences mShare = WDApplication.getShare();
 
@@ -41,7 +42,7 @@ public abstract class WDFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(getLayoutId(),container,false);
 		unbinder = ButterKnife.bind(this,view);
-
+		context=getActivity();
 		initView();
 		//调用沉浸式
 		setWindowStatusBarColor(getActivity(), R.color.transparent);

@@ -65,4 +65,6 @@ dependencies {
     implementation files('lib/classes.jar')
 
     api 'com.henryblue.minimusicview:library:1.0.1'
+    //flybanner
+    api 'com.recker.flybanner:flybanner:1.3'
 }

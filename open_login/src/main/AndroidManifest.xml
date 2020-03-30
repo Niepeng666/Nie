@@ -11,5 +11,6 @@
             </intent-filter>
         </activity>
         <activity android:name="com.bianhua.com.activity.RegisterActivity"/>
+
     </application>
 </manifest>
