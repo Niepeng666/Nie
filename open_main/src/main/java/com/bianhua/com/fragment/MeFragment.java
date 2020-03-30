@@ -35,14 +35,21 @@ public class MeFragment extends WDFragment {
 
     @Override
     protected void initView() {
+
+        initData();
+    }
+
+    private void initData() {
+
         text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 MainActivity.instance.finish();
+
+
             }
         });
     }
-
 
 
 }
