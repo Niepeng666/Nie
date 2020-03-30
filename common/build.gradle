@@ -67,4 +67,13 @@ dependencies {
     api 'com.henryblue.minimusicview:library:1.0.1'
     //flybanner
     api 'com.recker.flybanner:flybanner:1.3'
+//    // fresco仅支持 WebP 静态图，需要添加
+//    api'com.facebook.fresco:webpsupport:0.14.1'
+//     // fresco支持 GIF 动图，需要添加
+//    api'com.facebook.fresco:animated-gif:0.14.1'
+//    // fresco支持 WebP 静态图及 WebP 动图，需要添加
+//    api'com.facebook.fresco:animated-webp:0.14.1'
+//    api'com.facebook.fresco:webpsupport:0.14.1'
+
+
 }
