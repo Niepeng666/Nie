@@ -8,6 +8,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.bianhua.com.R;
 import com.bianhua.com.R2;
 import com.bianhua.com.core.WDActivity;
+import com.bianhua.com.core.WDApplication;
 import com.bianhua.com.util.Constant;
 
 import butterknife.BindView;
@@ -48,6 +49,8 @@ public class WelcomeActivity extends WDActivity {
     protected void initView() {
         seekText.setText("跳过"+count+"s");
         handler.sendEmptyMessageDelayed(1,1000);
+
+
     }
 
     @OnClick(R2.id.seek_text)

@@ -2,7 +2,6 @@ package com.bianhua.com.activity;
 
 
 
-import android.Manifest;
 import android.text.TextUtils;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -24,8 +23,9 @@ import com.bianhua.com.core.db.UserInfoDao;
 import com.bianhua.com.core.exception.ApiException;
 import com.bianhua.com.presenter.LoginPresenter;
 import com.bianhua.com.util.Constant;
-import com.bianhua.com.util.MD5Utils;
 import com.bianhua.com.util.UIUtils;
+import com.bianhua.com.util.utils.Md5;
+import com.bianhua.com.util.utils.PermissionsUtils;
 import com.bianhua.com.util.utils.StorageCustomerInfo02Util;
 import com.bianhua.com.util.utils.StorageCustomerInfoUtil;
 
@@ -55,6 +55,7 @@ public class LoginActivity extends WDActivity {
     @Override
     protected void destoryData() {
         requestPresenter.unBind();
+        PermissionsUtils.requestPermissionselect(this);
     }
 
     @Override
@@ -96,7 +97,7 @@ public class LoginActivity extends WDActivity {
                     .putString("pas", p).commit();
         }
         mLoadDialog.show();
-        requestPresenter.reqeust(m, MD5Utils.md5(p));
+        requestPresenter.reqeust(m, Md5.GetMD5Code(p));
     }
 
     /**

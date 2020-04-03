@@ -13,8 +13,8 @@ import com.bianhua.com.core.WDActivity;
 import com.bianhua.com.core.exception.ApiException;
 import com.bianhua.com.presenter.RegisterPresenter;
 import com.bianhua.com.util.Constant;
-import com.bianhua.com.util.MD5Utils;
 import com.bianhua.com.util.UIUtils;
+import com.bianhua.com.util.utils.Md5;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -57,7 +57,7 @@ public class RegisterActivity extends WDActivity {
             return;
         }
         mLoadDialog.show();
-        requestPresenter.reqeust(m, MD5Utils.md5(p));
+        requestPresenter.reqeust(m, Md5.GetMD5Code(p));
     }
 
     private boolean pasVisibile = false;
