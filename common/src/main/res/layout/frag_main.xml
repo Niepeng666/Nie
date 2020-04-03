@@ -12,6 +12,7 @@
         <com.recker.flybanner.FlyBanner
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_marginTop="-30dp"
             android:padding="10dp"
             android:id="@+id/flybanner"/>
 
