@@ -1,16 +1,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bianhua.com" >
+    package="com.login.com" >
     <application>
-        <activity android:name="com.bianhua.com.activity.LoginActivity">
+        <activity android:name="com.login.com.activity.LoginActivity"
+            android:launchMode="singleTask">
         </activity>
-        <activity android:name="com.bianhua.com.activity.WelcomeActivity">
+        <activity android:name="com.login.com.activity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.bianhua.com.activity.RegisterActivity"/>
+        <activity android:name="com.login.com.activity.RegisterActivity"/>
 
     </application>
 </manifest>

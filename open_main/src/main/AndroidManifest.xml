@@ -1,10 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bianhua.com" >
+    package="com.main.com" >
     <application>
-        <activity android:name="com.bianhua.com.activity.MainActivity">
+        <activity android:name="com.main.com.activity.MainActivity">
         </activity>
-        <activity android:name="com.bianhua.com.activity.SetActivity"/>
-        <activity android:name="com.bianhua.com.activity.AddCircleActivity"/>
+        <activity android:name="com.main.com.activity.SetActivity"/>
+        <activity android:name="com.main.com.activity.AddCircleActivity"/>
         <activity android:name=".activity.WebViewActivity"/>
     </application>
 </manifest>

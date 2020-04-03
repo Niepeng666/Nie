@@ -2,6 +2,12 @@ apply plugin: 'com.android.application'
 apply from: 'tinker-support.gradle'
 android {
     signingConfigs {
+    config {
+        storeFile file('D:\\bianhua\\study_me\\Bianhua\\app\\bianhua.jks')
+        storePassword 'bianhua'
+        keyAlias = 'key0'
+        keyPassword 'bianhua'
+    }
     }
     compileSdkVersion projectConfig.compileSdkVersion
     defaultConfig {
