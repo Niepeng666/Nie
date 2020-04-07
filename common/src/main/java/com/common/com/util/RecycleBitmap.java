@@ -1,4 +1,4 @@
-package com.common.com.util.utils;
+package com.common.com.util;
 
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;

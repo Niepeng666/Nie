@@ -60,7 +60,7 @@ public class MeFragment extends WDFragment {
 
     }
     private void initData() {
-
+        //设置页面
         text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

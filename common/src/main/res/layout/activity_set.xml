@@ -4,6 +4,20 @@
     android:layout_height="match_parent">
     <include layout="@layout/layout_title"/>
 
+
+
+    <Button
+        android:id="@+id/clne_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@android:color/holo_purple"
+        android:text="清除缓存"
+        android:textColor="@android:color/white" />
+
+
     <Button
         android:id="@+id/logout_btn"
         android:layout_width="match_parent"
@@ -11,7 +25,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
-        android:background="@android:color/holo_red_light"
+        android:background="@android:color/holo_purple"
         android:text="退出登录"
         android:textColor="@android:color/white" />
 

@@ -1,4 +1,4 @@
-package com.common.com.util.utils;
+package com.common.com.util;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -21,6 +21,7 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.media.ExifInterface;
 
+import com.common.com.util.LogUtil;
 import com.common.com.util.LogUtils;
 
 

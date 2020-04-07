@@ -16,7 +16,6 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.common.com.util.utils.ActivityManager;
 import com.common.com.R;
 import com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar;
 

@@ -1,4 +1,4 @@
-package com.common.com.util.utils;
+package com.common.com.util;
 
 import java.io.File;
 import java.lang.reflect.Field;
@@ -35,7 +35,9 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.bianhua.com.util.ViewUtils;
+import com.common.com.util.LogUtil;
+
+
 
 /**
  * 

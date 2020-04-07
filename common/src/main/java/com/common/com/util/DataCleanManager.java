@@ -1,4 +1,5 @@
-package com.common.com.util.utils;
+package com.common.com.util;
+
 import android.content.Context;
 import android.os.Environment;
 

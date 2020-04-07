@@ -1,4 +1,4 @@
-package com.common.com.util.utils;
+package com.common.com.util;
 
 /**
  * Copyright (C) 2010 The Android Open Source Project

@@ -2,6 +2,9 @@ package com.common.com.util.utils;
 
 import android.text.TextUtils;
 
+import com.common.com.util.CommonUtils;
+import com.common.com.util.LogUtil;
+
 import java.util.HashMap;
 
 public class Constant {
@@ -59,7 +62,7 @@ public class Constant {
                     urlBuffer.append("&" + i + "=" + parameterMap.get(i));
                 }
         }
-        LogUtil.i("requestUrl", "requestUrl==" + urlBuffer.toString());
+     LogUtil.i("requestUrl", "requestUrl==" + urlBuffer.toString());
         return urlBuffer.toString();
     }
 
@@ -85,7 +88,7 @@ public class Constant {
                     urlBuffer.append("&" + i + "=" + parameterMap.get(i + ""));
                 }
         }
-        LogUtil.i("requestUrl", "requestUrl==" + urlBuffer.toString());
+       LogUtil.i("requestUrl", "requestUrl==" + urlBuffer.toString());
         return urlBuffer.toString();
     }
 
@@ -100,7 +103,7 @@ public class Constant {
         for (int i = 0; i <= 63; i++) {
             if (!TextUtils.isEmpty(parameterMap.get(i))) urlBuffer.append(parameterMap.get(i));
         }
-        LogUtil.i("macData", "macData==" + urlBuffer.toString());
+       LogUtil.i("macData", "macData==" + urlBuffer.toString());
         return CommonUtils.Md5(urlBuffer.toString() + mainKey);
     }
 
