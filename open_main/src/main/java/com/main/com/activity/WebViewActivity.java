@@ -22,6 +22,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.common.com.core.WDActivity;
+import com.common.com.util.PaxWebChromeClient;
 import com.main.com.R;
 
 
@@ -32,6 +33,7 @@ public class WebViewActivity extends WDActivity {
     private ImageView imageFinsh;
     private TextView textTitle;
     private String title;
+    private PaxWebChromeClient chromeClient;
 
 
     @Override
@@ -51,11 +53,15 @@ public class WebViewActivity extends WDActivity {
         imageFinsh =(ImageView)findViewById(R.id.image_finsh);
         textTitle =(TextView)findViewById(R.id.text_title);
         textTitle.setText(title);
+        //参数2 ProgressBar控件，参数三标题textview
+        chromeClient = new PaxWebChromeClient(this, pg1, textTitle);
+
         //设置WebView属性，能够执行Javascript脚本
         //webview.getSettings().setJavaScriptEnabled(true);
         //加载需要显示的网页
         // webview.loadUrl("http://fans.lanqt.com/index.php?
         // g=App&m=Index&a=xyk001");
+
         //判断是否设置成百分比缩放
         if ("我的保单".equals(title)||"常见问题".equals(title)){
 

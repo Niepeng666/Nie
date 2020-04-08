@@ -3,6 +3,7 @@ package com.common.com.core;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -13,8 +14,10 @@ import android.provider.MediaStore;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -182,7 +185,20 @@ public abstract class WDActivity extends AppCompatActivity {
         }
         return null;
     }
+    //判断手机是否有导航栏
+    public static boolean checkDeviceHasNavigationBar(Context activity) {
+        //通过判断设备是否有返回键、菜单键(不是虚拟键,是手机屏幕外的按键)来确定是否有navigation bar
+        boolean hasMenuKey = ViewConfiguration.get(activity)
+                .hasPermanentMenuKey();
+        boolean hasBackKey = KeyCharacterMap
+                .deviceHasKey(KeyEvent.KEYCODE_BACK);
 
+        if (!hasMenuKey && !hasBackKey) {
+            // 做任何自己需要做的,这个设备有一个导航栏
+            return true;
+        }
+        return false;
+    }
 
 
 }
