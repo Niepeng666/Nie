@@ -11,10 +11,10 @@ import com.common.com.core.WDActivity;
 import com.common.com.core.db.DaoMaster;
 import com.common.com.core.db.UserInfoDao;
 import com.common.com.util.Constant;
+import com.common.com.util.DataCleanManager;
+import com.common.com.util.StorageCustomerInfo02Util;
+import com.common.com.util.StorageCustomerInfoUtil;
 import com.common.com.util.ViewUtils;
-import com.common.com.util.utils.DataCleanManager;
-import com.common.com.util.utils.StorageCustomerInfo02Util;
-import com.common.com.util.utils.StorageCustomerInfoUtil;
 import com.main.com.R;
 import com.main.com.R2;
 

@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.common.com.core.WDActivity;
+import com.common.com.util.ActivityManager;
 import com.main.com.R;
 import com.main.com.R2;
 import com.main.com.fragment.CircleFragment;
@@ -19,7 +20,9 @@ import com.main.com.fragment.SendFragment;
 import com.main.com.fragment.ShareFragment;
 import com.main.com.model.SendMessageCommunitor;
 import com.common.com.util.Constant;
-import com.common.com.util.utils.ActivityManager;
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+
+import java.util.Calendar;
 
 import butterknife.BindView;
 

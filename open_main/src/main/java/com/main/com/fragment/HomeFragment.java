@@ -108,6 +108,7 @@ public class HomeFragment extends WDFragment {
     @Override
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
+        Log.e("TAG",hidden+"");
         if (!hidden){
             Log.e("TAG","走方法了!");
         }

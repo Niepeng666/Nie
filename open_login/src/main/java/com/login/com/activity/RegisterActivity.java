@@ -9,11 +9,11 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.common.com.core.DataCall;
 import com.common.com.core.WDActivity;
 import com.common.com.core.exception.ApiException;
+import com.common.com.util.Md5;
 import com.login.com.R2;
 import com.login.com.presenter.RegisterPresenter;
 import com.common.com.util.Constant;
 import com.common.com.util.UIUtils;
-import com.common.com.util.utils.Md5;
 import com.login.com.R;
 
 import butterknife.BindView;

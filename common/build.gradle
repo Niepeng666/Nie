@@ -30,12 +30,13 @@ android {
     buildToolsVersion = '28.0.3'
 
 }
-
 greendao {
     schemaVersion 1  //版本
     daoPackage 'com.common.com.db' // 一般为app包名+生成文件的文件夹名
     targetGenDir 'src/main/java' //生成文件路径
 }
+
+
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -49,10 +50,10 @@ dependencies {
     api 'com.squareup.retrofit2:converter-gson:2.5.0'
     api 'io.reactivex.rxjava2:rxjava:2.2.4'
     api 'io.reactivex.rxjava2:rxandroid:2.1.0'
-    api 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
-    api 'com.squareup.okhttp3:logging-interceptor:3.12.1'
     api 'org.greenrobot:greendao:3.2.2'
     api 'org.greenrobot:greendao-generator:3.2.2'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.12.1'
     api 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
     api 'com.facebook.fresco:fresco:1.11.0'
     api 'com.jcodecraeer:xrecyclerview:1.5.9'
@@ -71,4 +72,11 @@ dependencies {
     api 'com.hjq:xxpermissions:6.0'
     //沉浸式状态栏的
     api 'com.gyf.immersionbar:immersionbar:3.0.0'
+    //tablayout 控件
+    api 'com.android.support:design:26.0.0-alpha1'
+    //日历控件
+    api 'com.prolificinteractive:material-calendarview:1.4.0'
+    //取色盘
+    api 'com.github.skydoves:colorpickerpreference:1.0.2'
+
 }

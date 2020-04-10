@@ -12,13 +12,13 @@ import com.common.com.core.WDActivity;
 import com.common.com.core.db.DaoMaster;
 import com.common.com.core.db.UserInfoDao;
 import com.common.com.core.exception.ApiException;
+import com.common.com.util.Md5;
 import com.common.com.util.PermissionsUtils;
 import com.login.com.R;
 import com.login.com.R2;
 import com.login.com.presenter.LoginPresenter;
 import com.common.com.util.Constant;
 import com.common.com.util.ViewUtils;
-import com.common.com.util.utils.Md5;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -147,7 +147,7 @@ public class LoginActivity extends WDActivity {
         @Override
         public void fail(ApiException e, Object... args) {
 
-            ViewUtils.makeToast(context,"",1500);
+            ViewUtils.makeToast(context,"欢迎来到我的world",1500);
         }
     }
 }
