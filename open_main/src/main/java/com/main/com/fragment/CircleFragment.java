@@ -14,6 +14,8 @@ import com.common.com.util.ViewUtils;
 import com.main.com.R;
 import com.main.com.R2;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.DayViewDecorator;
+import com.prolificinteractive.materialcalendarview.DayViewFacade;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 
@@ -43,7 +45,7 @@ public class CircleFragment extends WDFragment implements OnDateSelectedListener
     TextView text_time;
     private Calendar calendar;
     String today="";
-    boolean flag=false;
+    final int i=2;
     @Override
     public String getPageName() {
         return "**Fragment";
@@ -56,45 +58,26 @@ public class CircleFragment extends WDFragment implements OnDateSelectedListener
 
     @Override
     protected void initView() {
-
-//set selected date
-
-
-
-        relatLayout.setBackgroundColor(Color.parseColor("#13D1E2"));
-
+        relatLayout.setBackgroundColor(Color.parseColor("#13D1E2"));//设置选中日期的背景色
         calendar = Calendar.getInstance();
         calendar.add(Calendar.DAY_OF_MONTH, 0);
          final int month = calendar.get(Calendar.MONTH);
-        mater_ial.setSelectedDate(calendar);
-//        mater_ial.state().edit().setMinimumDate(calendar)
-//                .commit();
-//        mater_ial.state().edit().setMaximumDate(calendar)
-//                .commit();
+         mater_ial.setSelectedDate(calendar);
+         mater_ial.setSelectionMode(MaterialCalendarView.SELECTION_MODE_MULTIPLE);//设置日历为多选日历
 
-        if (flag){
-            mater_ial.setSelectionMode(MaterialCalendarView.SELECTION_MODE_MULTIPLE);
-        }else{
-
-        }
-        button01.setOnClickListener(new View.OnClickListener() {//设置日历变为多选日历
+        button01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                flag=true;
                 text_time.setText(today);
                 Log.e("TAG",calendar.toString());
-//                 <!--multiple dates 多个日期-->
-
             }
         });
-
         button02.setOnClickListener(new View.OnClickListener() {//点击获取选中的时间 吐司...
             @Override
             public void onClick(View view) {
-                // CalendarDay date = widget.getSelectedDate();
                 CalendarDay selectedDate = mater_ial.getSelectedDate();
                 if (selectedDate!=null){
-                    flag=false;
+
                     Date time = calendar.getTime();
                     String format = sdf22.format(time);
                     ViewUtils.makeToast(context,calendar.get(Calendar.YEAR)+"年"+(month+1)+"月"+calendar.get(Calendar.DAY_OF_MONTH)+"日"+"-------"+format,1500);
@@ -106,38 +89,20 @@ public class CircleFragment extends WDFragment implements OnDateSelectedListener
 
             }
         });
-
         mater_ial.setOnDateChangedListener(new OnDateSelectedListener() {
             @Override
             public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
 
-
-
-
                 String tag = getTag();
                 String day = sdf.format(date.getDate());
                 today=day;
-                Log.e("TAG",date.toString());
                 ViewUtils.makeToast(context,"日期:"+date.getYear() + "年"+(date.getMonth()+1)+ "月" + date.getDay() + "日",1500);
                 text_time.setText(date.getYear() + "年"+(date.getMonth()+1) + "月" + date.getDay() + "日");
             }
         });
-
-
-    }
-
-
-
-
-
-
-    @Override
-    public void onResume() {
-        super.onResume();
+        mater_ial.addDecorator(new PrimeDayDisableDecorator());
 
     }
-
-
     @Override
     public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
 
@@ -146,10 +111,32 @@ public class CircleFragment extends WDFragment implements OnDateSelectedListener
         String tag = getTag();
         String day = sdf.format(date.getDate());
         today=day;
-//        tv_year.setText(date.getYear() + "年");
-//        tv_monthAndDay.setText(date.getMonth() + 1 + "月" + date.getDay() + "日");
-      //  tv_weekDay.setText("周" + numToChinese(date.getCalendar().get(Calendar.DAY_OF_WEEK)));
+
         ViewUtils.makeToast(context,"日期:"+date.getYear() + "年"+date.getMonth() + 1 + "月" + date.getDay() + "日",1500);
         text_time.setText(date.getYear() + "年"+date.getMonth() + 1 + "月" + date.getDay() + "日");
     }
+    private static class PrimeDayDisableDecorator implements DayViewDecorator {
+
+
+
+        @Override
+        public boolean shouldDecorate(CalendarDay day) {
+            return day.getCalendar().compareTo(Calendar.getInstance()) == -1;
+            //这里return的是一个boolean类型的数据，
+            // 如果直接返回为true，下面的decorate()会不好使，没有日期禁用效果
+            // false，会让日历上的所有日期都无法选中，
+            // 只能day.getCalendar().compareTo(Calendar.getInstance()) == -1可以让当前系统日期，之前的时间不能被选中，之后的可以被选中。
+
+
+        }
+
+        @Override
+        public void decorate(DayViewFacade view) {
+                view.setDaysDisabled(true);     //日期禁用
+        }
+
+
+    }
+
+
 }

@@ -2,10 +2,8 @@ package com.main.com.fragment;
 
 
 
-import android.view.View;
+import android.os.Handler;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -29,6 +27,7 @@ public class SendFragment extends WDFragment {
     RecyclerView recyclerView;
     @BindView(R2.id.swipe)
     SwipeRefreshLayout swipe;
+
     @Override
     public String getPageName() {
         return "***Fragment";
@@ -41,6 +40,7 @@ public class SendFragment extends WDFragment {
 
     @Override
     protected void initView() {
+
        Bb_Bean bb_bean=new Bb_Bean();
         bb_bean.setId(0);
         bb_bean.setPrice(9.90);
@@ -60,11 +60,28 @@ public class SendFragment extends WDFragment {
             list.add(bb_bean);
             list.add(bb_bean2);
             list.add(bb_bean3);
+        list.add(bb_bean);
+        list.add(bb_bean2);
+        list.add(bb_bean3);
+        list.add(bb_bean);
+        list.add(bb_bean2);
+        list.add(bb_bean3);
+        list.add(bb_bean);
+        list.add(bb_bean2);
+        list.add(bb_bean3);
+        list.add(bb_bean);
+        list.add(bb_bean2);
+        list.add(bb_bean3);
+        list.add(bb_bean);
+        list.add(bb_bean2);
+        list.add(bb_bean3);
+        list.add(bb_bean);
+        list.add(bb_bean2);
+        list.add(bb_bean3);
         final MyAdapter myAdapter=new MyAdapter(context,list);
         LinearLayoutManager layoutManager=new LinearLayoutManager(context);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(myAdapter);
-
 
         //设置下拉时圆圈的颜色（可以由多种颜色拼成）
         swipe.setColorSchemeResources(android.R.color.holo_blue_light,
@@ -80,7 +97,7 @@ public class SendFragment extends WDFragment {
             public void onRefresh() {
                 swipe.setRefreshing(false);
                 ViewUtils.makeToast(context,"刷新成功！",1500);
-                list.clear();
+               // list.clear();
                 myAdapter.notifyDataSetChanged();
             }
         });
@@ -89,6 +106,7 @@ public class SendFragment extends WDFragment {
 
 
     }
+
 
 
 }

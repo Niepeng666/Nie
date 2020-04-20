@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.common.com.core.WDFragment;
+import com.common.com.util.ChooseDialog;
 import com.common.com.util.StorageCustomerInfo02Util;
 import com.common.com.util.ViewUtils;
 import com.main.com.R;
@@ -41,7 +42,8 @@ public class ShareFragment extends WDFragment {
     TextView text;
     @BindView(R2.id.colorView)
     ColorPickerView colorView;
-
+    @BindView(R2.id.text_fenxiang)
+    TextView text_fenxiang;
     private PopupWindow popupWindow;
     private RecyclerView recycler;
     List list=new ArrayList();
@@ -77,8 +79,36 @@ public class ShareFragment extends WDFragment {
                 colorView.setVisibility(View.GONE);
             }
         });
+        //分享
+        text_fenxiang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                popupWindow01();
+            }
+        });
 
 
+    }
+
+    private void popupWindow01() {
+        ViewUtils.makeToast(context,"弹框了！",500);
+        new ChooseDialog(context,"微信分享","QQ分享").setOnChooseDialogListener(new ChooseDialog.OnChooseDialogListener() {
+            @Override
+            public void onCancle() {
+
+            }
+
+            @Override
+            public void onSelect0() {//WX
+                ViewUtils.makeToast(context,"微信",500);
+            }
+
+            @Override
+            public void onSelect1() {//QQ
+                ViewUtils.makeToast(context,"QQ",500);
+            }
+        }).show();
 
     }
 

@@ -52,7 +52,6 @@ public class MainActivity extends WDActivity implements RadioGroup.OnCheckedChan
     protected int getLayoutId() {
         return R.layout.activity_main;
     }
-
     @Override
     protected void initView() {
         instance=this;
@@ -66,14 +65,11 @@ public class MainActivity extends WDActivity implements RadioGroup.OnCheckedChan
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
         tx.add(R.id.container, homeFragment)
                 .show(homeFragment).commit();
-
     }
-
     @Override
     protected void destoryData() {
 
     }
-
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         if (checkedId == R.id.home_btn) {
@@ -134,6 +130,7 @@ public class MainActivity extends WDActivity implements RadioGroup.OnCheckedChan
             }
         }
         return super.onKeyDown(keyCode, event);
+
     }
 
 }

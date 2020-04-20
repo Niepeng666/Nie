@@ -1,6 +1,8 @@
 package com.main.com.fragment;
 
 import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -11,6 +13,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.core.app.ActivityCompat;
@@ -20,6 +23,9 @@ import com.common.com.util.ChooseDialog;
 import com.common.com.util.Constant;
 import com.main.com.R;
 import com.main.com.R2;
+import com.skydoves.colorpickerpreference.ColorEnvelope;
+import com.skydoves.colorpickerpreference.ColorListener;
+import com.skydoves.colorpickerpreference.ColorPickerDialog;
 
 
 import java.io.File;
@@ -40,6 +46,10 @@ public class MeFragment extends WDFragment {
     TextView text;
     @BindView(R2.id.imageView)
     ImageView imageView;
+    @BindView(R2.id.text_color)
+    TextView text_color;
+    @BindView(R2.id.text_diao)
+    TextView text_diao;
 
     @Override
     public String getPageName() {
@@ -74,6 +84,45 @@ public class MeFragment extends WDFragment {
                 initPicture();// 相机、相册
             }
         });
+        //自定义取色盘
+        text_color.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ColorPickerDialog.Builder builder = new ColorPickerDialog.Builder(context, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
+                builder.setTitle("自定义取色器");
+                builder.setPreferenceName("MyColorPickerDialog");
+                builder.setFlagView(new CustomFlag(context, R.layout.layout_flag));
+                builder.setPositiveButton("确定", new ColorListener() {
+                    @Override
+                    public void onColorSelected(ColorEnvelope colorEnvelope) {
+//                        TextView textView = findViewById(R.id.textView);
+//                        textView.setText("#" + colorEnvelope.getHtmlCode());
+//
+//                        LinearLayout linearLayout = findViewById(R.id.linearLayout);
+                        text_color.setBackgroundColor(colorEnvelope.getColor());
+
+                    }
+                });
+                builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+                builder.show();
+            }
+        });
+        //调用系统的分享
+        text_diao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent textIntent = new Intent(Intent.ACTION_SEND);
+                textIntent.setType("text/plain");
+                textIntent.putExtra(Intent.EXTRA_TEXT, "这是一段分享的文字");
+                startActivity(Intent.createChooser(textIntent, "分享"));
+            }
+        });
+
     }
     //添加动态权限
     private void DongTaiShare() {
@@ -83,7 +132,7 @@ public class MeFragment extends WDFragment {
         }
     }
     private void initPicture() {
-        new ChooseDialog(context).setOnChooseDialogListener(new ChooseDialog.OnChooseDialogListener() {
+        new ChooseDialog(context,"调用相机","调用相册").setOnChooseDialogListener(new ChooseDialog.OnChooseDialogListener() {
             @Override
             public void onCancle() {
 

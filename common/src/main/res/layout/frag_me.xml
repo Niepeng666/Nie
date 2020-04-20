@@ -12,6 +12,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <ImageView
+
                 android:background="@drawable/image_phto"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -26,6 +27,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="设置"
+                android:textColor="#000"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/text_color"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="弹框"
+                android:textColor="#000"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/text_diao"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="调用本地分享"
                 android:textColor="#000"
                 android:textSize="16sp"/>
         </LinearLayout>

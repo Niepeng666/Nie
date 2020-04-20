@@ -1,8 +1,11 @@
 package com.login.com.activity;
+import android.content.Intent;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.view.KeyEvent;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import com.alibaba.android.arouter.facade.annotation.Route;
@@ -12,6 +15,7 @@ import com.common.com.core.WDActivity;
 import com.common.com.core.db.DaoMaster;
 import com.common.com.core.db.UserInfoDao;
 import com.common.com.core.exception.ApiException;
+import com.common.com.util.ActivityManager;
 import com.common.com.util.Md5;
 import com.common.com.util.PermissionsUtils;
 import com.login.com.R;
@@ -38,7 +42,7 @@ public class LoginActivity extends WDActivity {
     @BindView(R2.id.login_rem_pas)
     CheckBox mRemPas;
     private boolean pwd_checked;
-
+    private long firstime;
     @Override
     protected int getLayoutId() {
         return R.layout.activity_login;//布局
@@ -53,6 +57,8 @@ public class LoginActivity extends WDActivity {
     protected void initView() {
         //开启基础权限
         PermissionsUtils.requestPermissionselect(this);
+        //设置activity的启动模式
+
 
         //创建P层
         requestPresenter = new LoginPresenter(new LoginCall());
@@ -150,4 +156,24 @@ public class LoginActivity extends WDActivity {
             ViewUtils.makeToast(context,"欢迎来到我的world",1500);
         }
     }
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if (keyCode == KeyEvent.KEYCODE_BACK) {
+//            /** 设置双击退出 */
+//            long secondtime = System.currentTimeMillis();
+//            if (secondtime - firstime > 3000) {
+//                Toast.makeText(this, "再按一次返回键退出", Toast.LENGTH_SHORT).show();
+//
+//                firstime = System.currentTimeMillis();
+//                return true;
+//            } else {
+//                finish();
+//                ActivityManager.exit();
+//                System.exit(0);
+//            }
+//        }
+//        return super.onKeyDown(keyCode, event);
+//
+//    }
+
 }

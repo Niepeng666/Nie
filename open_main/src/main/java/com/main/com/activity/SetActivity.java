@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.common.com.core.WDActivity;
 import com.common.com.core.db.DaoMaster;
 import com.common.com.core.db.UserInfoDao;
@@ -27,7 +28,7 @@ import butterknife.OnClick;
  * qq:2241659414
  */
 @Route(path = Constant.ACTIVITY_URL_SET)
-public class SetActivity extends WDActivity {
+public class SetActivity extends WDActivity  {
     @BindView(R2.id.relat_layout)
     RelativeLayout relat_layout;
     @BindView(R2.id.clne_btn)
@@ -42,8 +43,9 @@ public class SetActivity extends WDActivity {
     @Override
     protected void initView() {
         relat_layout.setBackgroundColor(Color.parseColor("#C69AEC52"));
+
         //清除缓存
-        clne_btn.setOnClickListener(new View.OnClickListener() {
+       /* clne_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DataCleanManager.clearAllCache(context);
@@ -51,8 +53,10 @@ public class SetActivity extends WDActivity {
 
 
             }
-        });
+        });*/
     }
+
+
 
     @Override
     protected void destoryData() {
@@ -62,12 +66,13 @@ public class SetActivity extends WDActivity {
     @SuppressLint("WrongConstant")
     @OnClick(R2.id.logout_btn)
     public void logout(){
-        UserInfoDao userInfoDao = DaoMaster.newDevSession(this, UserInfoDao.TABLENAME).getUserInfoDao();
-        userInfoDao.delete(LOGIN_USER);
+
         //清除存储终端信息的缓存数据
         StorageCustomerInfoUtil.clearKey(this);
         StorageCustomerInfo02Util.clearKey(this);
         intentByRouter(Constant.ACTIVITY_URL_LOGIN);
 
     }
+
+
 }

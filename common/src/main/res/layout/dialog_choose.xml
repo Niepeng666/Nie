@@ -19,8 +19,7 @@
             android:padding="12dp"
             android:textSize="16sp"
             android:id="@+id/text_tip00"
-            android:textColor="#2D91FE"
-            android:text="从相机拍摄"/>
+            android:textColor="#2D91FE" />
         <View
             android:layout_width="match_parent"
             android:layout_height="0.6dp"
@@ -32,8 +31,7 @@
             android:id="@+id/text_tip01"
             android:padding="12dp"
             android:textSize="16sp"
-            android:textColor="#2D91FE"
-            android:text="从相册选择"/>
+            android:textColor="#2D91FE" />
 
     </LinearLayout>
 
