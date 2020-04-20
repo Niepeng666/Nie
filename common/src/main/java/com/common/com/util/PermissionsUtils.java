@@ -1,6 +1,10 @@
 package com.common.com.util;
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.pm.PackageManager;
+
+import androidx.core.app.ActivityCompat;
 
 import com.common.com.util.ViewUtils;
 import com.hjq.permissions.OnPermission;
@@ -189,5 +193,20 @@ public class PermissionsUtils {
      */
     public static void gotoPermissionSettings(final Activity context) {//
         XXPermissions.gotoPermissionSettings(context);
+    }
+    /**
+     * 获取相机权限
+     *
+     * @param activity
+     * @return
+     */
+    public static boolean CAMERA(Activity activity) {
+        if (ActivityCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(activity,
+                    new String[]{Manifest.permission.CAMERA},
+                    105);
+            return false;
+        }
+        return true;
     }
 }

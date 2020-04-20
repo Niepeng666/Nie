@@ -21,6 +21,7 @@ import androidx.core.app.ActivityCompat;
 import com.common.com.core.WDFragment;
 import com.common.com.util.ChooseDialog;
 import com.common.com.util.Constant;
+import com.common.com.util.PermissionsUtils;
 import com.main.com.R;
 import com.main.com.R2;
 import com.skydoves.colorpickerpreference.ColorEnvelope;
@@ -80,7 +81,9 @@ public class MeFragment extends WDFragment {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DongTaiShare();//获取权限
+                if (!PermissionsUtils.CAMERA(context)){
+                    return;
+                }
                 initPicture();// 相机、相册
             }
         });
@@ -124,13 +127,7 @@ public class MeFragment extends WDFragment {
         });
 
     }
-    //添加动态权限
-    private void DongTaiShare() {
-        if (Build.VERSION.SDK_INT >= 23) {
-            String[] mPermissionList = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.CALL_PHONE, Manifest.permission.READ_LOGS, Manifest.permission.READ_PHONE_STATE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.SET_DEBUG_APP, Manifest.permission.SYSTEM_ALERT_WINDOW, Manifest.permission.GET_ACCOUNTS, Manifest.permission.WRITE_APN_SETTINGS, Manifest.permission.CAMERA};
-            ActivityCompat.requestPermissions(getActivity(), mPermissionList, 123);
-        }
-    }
+
     private void initPicture() {
         new ChooseDialog(context,"调用相机","调用相册").setOnChooseDialogListener(new ChooseDialog.OnChooseDialogListener() {
             @Override

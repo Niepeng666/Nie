@@ -26,7 +26,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 public abstract class WDFragment extends Fragment {
-	public Context context;
+	public Activity context;
 	public Gson mGson = new Gson();
 	public SharedPreferences mShare = WDApplication.getShare();
 
