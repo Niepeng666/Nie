@@ -124,76 +124,6 @@ public class PermissionsUtils {
                     }
                 });
     }
-
-    /**
-     * 申请清单文件里所有敏感权限
-     */
-    public static void requestPermissionall(final Activity context) {
-
-        XXPermissions.with(context)
-                // 可设置被拒绝后继续申请，直到用户授权或者永久拒绝
-                .constantRequest()
-                // 支持请求6.0悬浮窗权限8.0请求安装权限
-                //.permission(Permission.REQUEST_INSTALL_PACKAGES)
-                // 不指定权限则自动获取清单中的危险权限
-                .request(new OnPermission() {
-
-                    @Override
-                    public void hasPermission(List<String> granted, boolean isAll) {
-                        if (isAll) {
-                            // ViewUtils.makeToast(context,"获取权限成功",1000);
-                        } else {
-                            ViewUtils.makeToast(context, "请开启权限！", 1000);
-                        }
-                    }
-
-                    @Override
-                    public void noPermission(List<String> denied, boolean quick) {
-                        if (quick) {
-                            /*ViewUtils.makeToast(context, "请开启权限！", 1000);
-                            //如果是被永久拒绝就跳转到应用权限系统设置页面
-                            XXPermissions.gotoPermissionSettings(context);*/
-                            ViewUtils.makeToast(context, "请开启所有权限！", 1000);
-                            XXPermissions.gotoPermissionSettings(context);
-                        } else {
-                            ViewUtils.makeToast(context, "获取权限失败", 1000);
-                        }
-                    }
-                });
-    }
-
-    /**
-     * 检查某个权限是否全部授予了
-     */
-    public static boolean isHasPermission(final Activity context, String permission) {//
-        if (XXPermissions.isHasPermission(context, permission)) {
-            //ViewUtils.makeToast(context, "已经获取到权限，不需要再次申请了", 1000);
-            return true;
-        } else {
-            return false;
-            //ViewUtils.makeToast(context, "还没有获取到权限或者部分权限未授予", 1000);
-        }
-    }
-    /**
-     * 检查某些权限是否全部授予了
-     */
-    public static boolean isHasPermissionall(final Activity context, String[] permission) {//
-        if (XXPermissions.isHasPermission(context, permission)) {
-            //ViewUtils.makeToast(context, "已经获取到权限，不需要再次申请了", 1000);
-            return true;
-        } else {
-            return false;
-            //ViewUtils.makeToast(context, "还没有获取到权限或者部分权限未授予", 1000);
-        }
-    }
-    /**
-     * 跳转到权限设置界面
-     *
-     * @param
-     */
-    public static void gotoPermissionSettings(final Activity context) {//
-        XXPermissions.gotoPermissionSettings(context);
-    }
     /**
      * 获取相机权限
      *
@@ -207,6 +137,22 @@ public class PermissionsUtils {
                     105);
             return false;
         }
+        return true;
+    }
+    /**
+     * 拨打电话权限
+     *
+     * @param activity
+     * @return
+     */
+    public static boolean CALL_PHONE(Activity activity) {
+        if (ActivityCompat.checkSelfPermission(activity, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(activity,
+                    new String[]{Manifest.permission.CALL_PHONE},
+                    103);
+            return false;
+        }
+
         return true;
     }
 }
