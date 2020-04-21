@@ -55,32 +55,18 @@ public abstract class WDActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context=this;
+        //沉浸式状态栏
+        ImmersionBar.with(this).barAlpha(0.1f).init();
         initLoad();
         setContentView(getLayoutId());
         ARouter.getInstance().inject(this);
         ButterKnife.bind(this);//绑定布局
         initView();
-        //沉浸式状态栏
-        ImmersionBar.with(this).barAlpha(0.1f).init();
+
         //全局设置竖屏
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
-    //全面屏适配
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus && Build.VERSION.SDK_INT >= 19) {
-            View decorView = getWindow().getDecorView();
-            decorView.setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-        }
-    }
     /**
      * 设置layoutId
      *
@@ -210,20 +196,6 @@ public abstract class WDActivity extends AppCompatActivity {
             return img_path;
         }
         return null;
-    }
-    //判断手机是否有导航栏
-    public static boolean checkDeviceHasNavigationBar(Context activity) {
-        //通过判断设备是否有返回键、菜单键(不是虚拟键,是手机屏幕外的按键)来确定是否有navigation bar
-        boolean hasMenuKey = ViewConfiguration.get(activity)
-                .hasPermanentMenuKey();
-        boolean hasBackKey = KeyCharacterMap
-                .deviceHasKey(KeyEvent.KEYCODE_BACK);
-
-        if (!hasMenuKey && !hasBackKey) {
-            // 做任何自己需要做的,这个设备有一个导航栏
-            return true;
-        }
-        return false;
     }
 
 
