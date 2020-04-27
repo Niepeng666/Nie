@@ -29,9 +29,12 @@
             android:text="Fragment0"
             android:textColor="#000"
             android:textSize="16sp"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/recyclerView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_cj"
+            android:text="幸运轮盘"
+            android:padding="10dp" />
     </LinearLayout>
 </LinearLayout>

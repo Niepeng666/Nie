@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="#4379">
         <include layout="@layout/layout_title"/>
-        <!--com.prolificinteractive.materialcalendarview.MaterialCalendarView-->
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

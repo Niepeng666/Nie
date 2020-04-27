@@ -86,6 +86,7 @@ public abstract class WDPresenter<T> {
      * 根据返回值灵活改变Consumer或者自己直接重写都可以
      */
     protected Consumer getConsumer(final Object...args){
+
         if (getResponseType()==RESPONSE_TYPE_SDK_BD) {//如果整个项目中只有一个百度的接口，那么不建议修改基类Presenter，请重写getConsumer方法就可以。
             return new Consumer<BDResult>() {
                 @Override

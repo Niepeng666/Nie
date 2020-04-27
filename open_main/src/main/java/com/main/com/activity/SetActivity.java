@@ -1,6 +1,7 @@
 package com.main.com.activity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.Button;
@@ -33,7 +34,8 @@ public class SetActivity extends WDActivity  {
     RelativeLayout relat_layout;
     @BindView(R2.id.clne_btn)
     Button clne_btn;
-
+    @BindView(R2.id.shoushi_pwd)
+    Button shoushi_pwd;
 
     @Override
     protected int getLayoutId() {
@@ -45,7 +47,7 @@ public class SetActivity extends WDActivity  {
         relat_layout.setBackgroundColor(Color.parseColor("#C69AEC52"));
 
         //清除缓存
-       /* clne_btn.setOnClickListener(new View.OnClickListener() {
+        clne_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DataCleanManager.clearAllCache(context);
@@ -53,7 +55,16 @@ public class SetActivity extends WDActivity  {
 
 
             }
-        });*/
+        });
+        //手势密码
+        shoushi_pwd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(context,Frist_shoushi_pwdActivity.class));
+            }
+        });
+
+
     }
 
 
@@ -70,7 +81,11 @@ public class SetActivity extends WDActivity  {
         //清除存储终端信息的缓存数据
         StorageCustomerInfoUtil.clearKey(this);
         StorageCustomerInfo02Util.clearKey(this);
-        intentByRouter(Constant.ACTIVITY_URL_LOGIN);
+        //Intent清除栈FLAG_ACTIVITY_CLEAR_TASK会把当前栈内所有Activity清空；
+        //FLAG_ACTIVITY_NEW_TASK配合使用，才能完成跳转
+        ARouter.getInstance().build(Constant.ACTIVITY_URL_LOGIN)
+                .withFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK)
+                .navigation();
 
     }
 

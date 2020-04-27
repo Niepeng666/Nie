@@ -39,19 +39,7 @@ public class NetworkManager {
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .addInterceptor(interceptor)
-//                .addInterceptor(new Interceptor() {
-//                    @Override
-//                    public Response intercept(Chain chain) throws IOException {
-//                        UserInfoDao userInfoDao = DaoMaster.newDevSession(WDApplication.getContext(),UserInfoDao.TABLENAME).getUserInfoDao();
-//                        List<UserInfo> userInfos = userInfoDao.queryBuilder().where(UserInfoDao.Properties.Status.eq(1)).list();
-//                        UserInfo userInfo = userInfos.get(0);//读取第一项
-//                        Request request = chain.request().newBuilder()
-//                                .addHeader("userId",userInfo.getUserId()+"")
-//                                .addHeader("sessionId",userInfo.getSessionId())
-//                                .build();
-//                        return chain.proceed(request);
-//                    }
-//                })
+
                 .connectTimeout(5,TimeUnit.SECONDS)
                 .writeTimeout(5,TimeUnit.SECONDS)
                 .readTimeout(5,TimeUnit.SECONDS)

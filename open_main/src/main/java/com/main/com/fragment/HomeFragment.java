@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.gyf.immersionbar.ImmersionBar;
 import com.main.com.R;
 import com.main.com.R2;
+import com.main.com.activity.ChoujiangActivity;
 import com.main.com.activity.WebViewActivity;
 import com.common.com.core.WDFragment;
 import com.main.com.model.SendMessageCommunitor;
@@ -28,12 +29,12 @@ import butterknife.BindView;
 public class HomeFragment extends WDFragment {
     @BindView(R2.id.text)
     TextView text;
-    @BindView(R2.id.recyclerView)
-     RecyclerView recyclerView;
     @BindView(R2.id.text_url)
     TextView textUrl;
     @BindView(R2.id.flybanner)
    FlyBanner flyBanner;
+    @BindView(R2.id.text_cj)
+    TextView text_cj;
     SendMessageCommunitor sendMessage;
 
 
@@ -51,7 +52,7 @@ public class HomeFragment extends WDFragment {
     @Override
     protected void initView() {
         //沉浸式状态栏
-        ImmersionBar.with(this).barAlpha(0.1f).init();
+      //  ImmersionBar.with(this).barAlpha(0.1f).init();
 
       ArrayList<Integer> listBanner=new ArrayList();
         listBanner.add(R.drawable.abc01);
@@ -80,7 +81,13 @@ public class HomeFragment extends WDFragment {
                         .putExtra("url","http://jucaibao.llyzf.cn:6442/lly-posp-proxy/jcb/helpCenter.html"));
             }
         });
-
+        //轮盘
+        text_cj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(context, ChoujiangActivity.class));
+            }
+        });
 
 
         //banner的点击事件

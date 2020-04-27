@@ -105,7 +105,7 @@ public class MainActivity extends WDActivity implements RadioGroup.OnCheckedChan
     private long firstime;
     @Override
     public void sendMessage(String msg) {
-        if (msg.equals("mainselecet1")){
+        if ("mainselecet1".equals(msg)){
             home_btn.setChecked(false);
             circle_btn.setChecked(false);
             cart_btn.setChecked(false);

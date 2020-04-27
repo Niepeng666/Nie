@@ -5,10 +5,10 @@ import android.os.Message;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.login.com.R;
-import com.login.com.R2;
 import com.common.com.core.WDActivity;
 import com.common.com.util.Constant;
+import com.login.com.R;
+import com.login.com.R2;
 
 import butterknife.BindView;
 import butterknife.OnClick;
