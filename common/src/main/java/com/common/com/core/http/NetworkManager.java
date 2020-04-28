@@ -2,11 +2,25 @@ package com.common.com.core.http;
 
 
 
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
+
 import com.common.com.core.WDPresenter;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
 
+import okhttp3.Cache;
+import okhttp3.Call;
+import okhttp3.Callback;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -21,6 +35,8 @@ public class NetworkManager {
 
     private static NetworkManager instance;
     private Retrofit app_retrofit,baidu_retrofit;
+    private OkHttpClient okHttpClient;
+
 
     private NetworkManager(){
         init();
@@ -37,7 +53,7 @@ public class NetworkManager {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);//打印请求参数，请求结果
 
-        OkHttpClient okHttpClient = new OkHttpClient.Builder()
+        okHttpClient = new OkHttpClient.Builder()
                 .addInterceptor(interceptor)
 
                 .connectTimeout(5,TimeUnit.SECONDS)
@@ -70,5 +86,12 @@ public class NetworkManager {
         }
         return app_retrofit.create(service);
     }
+
+
+
+
+
+
+
 
 }

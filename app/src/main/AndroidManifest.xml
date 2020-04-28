@@ -64,6 +64,17 @@
         <meta-data
             android:name="notch.config"
             android:value="portrait|landscape" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.bianhua.com.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
     </application>
         <!--android:windowSoftInputMode="adjustUnspecified|stateHidden"软键盘默认不弹出-->
 </manifest>

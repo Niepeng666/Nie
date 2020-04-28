@@ -1,13 +1,11 @@
 package com.login.com.activity;
-import android.content.Intent;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
-import android.view.KeyEvent;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
+
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.common.com.bean.UserInfo;
 import com.common.com.core.DataCall;
@@ -15,15 +13,13 @@ import com.common.com.core.WDActivity;
 import com.common.com.core.db.DaoMaster;
 import com.common.com.core.db.UserInfoDao;
 import com.common.com.core.exception.ApiException;
-import com.common.com.util.ActivityManager;
 import com.common.com.util.Md5;
 import com.common.com.util.PermissionsUtils;
+import com.common.com.util.updata.DialogUpdata;
 import com.login.com.R;
 import com.login.com.R2;
 import com.login.com.presenter.LoginPresenter;
 import com.common.com.util.Constant;
-import com.common.com.util.ViewUtils;
-
 import butterknife.BindView;
 import butterknife.OnClick;
 import pub.devrel.easypermissions.EasyPermissions;
@@ -41,8 +37,11 @@ public class LoginActivity extends WDActivity {
     EditText mPas;
     @BindView(R2.id.login_rem_pas)
     CheckBox mRemPas;
+   private int kk=101;
+    private String flag="FQZ";
     private boolean pwd_checked;
-    private long firstime;
+
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_login;//布局
@@ -58,30 +57,35 @@ public class LoginActivity extends WDActivity {
         //开启基础权限
         PermissionsUtils.requestPermissionselect(this);
         //设置activity的启动模式
-
-
         //创建P层
         requestPresenter = new LoginPresenter(new LoginCall());
-
-
-
     }
-
     @OnClick(R2.id.login_btn)
     public void login() {
 
-        intentByRouter(Constant.ACTIVITY_URL_MAIN);
-        finish();
 
 
+        String replace = Constant.VERSION.replace(".", "");
+        int ii = Integer.parseInt(replace);
+        if (ii>=kk){
+            intentByRouter(Constant.ACTIVITY_URL_MAIN);
+        }else{
+           if ("QZ".equals(flag)){
+               //强制更新
+//               DialogUpdata("退出","更新版本");
+               DialogUpdata.getInstance("退出","更新版本",1,"QZ").show(getSupportFragmentManager(),"updata");
+           }else{
+               //非强制更新
+//               DialogUpdata("忽略更新","更新版本");
+               DialogUpdata.getInstance("忽略更新","更新版本",1,"FQZ").show(getSupportFragmentManager(),"updata");//1版本号  FQZ：强制更新的标示
+           }
+
+
+        }
         String m = mMobile.getText().toString();
         String p = mPas.getText().toString();
-
-
-
         requestPresenter.reqeust(m, Md5.GetMD5Code(p));
     }
-
     /**
      * 重写onRequestPermissionsResult，用于接受请求结果
      *
@@ -143,37 +147,15 @@ public class LoginActivity extends WDActivity {
             UserInfoDao userInfoDao = DaoMaster.newDevSession(getBaseContext(), UserInfoDao.TABLENAME).getUserInfoDao();
             userInfoDao.insertOrReplace(result);//保存用户数据
             pwd_checked = mRemPas.isChecked();
-
-
-
             intentByRouter(Constant.ACTIVITY_URL_MAIN);
-            finish();
         }
 
         @Override
         public void fail(ApiException e, Object... args) {
 
-            ViewUtils.makeToast(context,"欢迎来到我的world",1500);
+
         }
     }
-//    @Override
-//    public boolean onKeyDown(int keyCode, KeyEvent event) {
-//        if (keyCode == KeyEvent.KEYCODE_BACK) {
-//            /** 设置双击退出 */
-//            long secondtime = System.currentTimeMillis();
-//            if (secondtime - firstime > 3000) {
-//                Toast.makeText(this, "再按一次返回键退出", Toast.LENGTH_SHORT).show();
-//
-//                firstime = System.currentTimeMillis();
-//                return true;
-//            } else {
-//                finish();
-//                ActivityManager.exit();
-//                System.exit(0);
-//            }
-//        }
-//        return super.onKeyDown(keyCode, event);
-//
-//    }
+
 
 }

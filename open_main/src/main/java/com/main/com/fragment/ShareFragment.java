@@ -1,5 +1,6 @@
 package com.main.com.fragment;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -26,6 +27,7 @@ import com.common.com.util.ViewUtils;
 import com.main.com.R;
 import com.main.com.R2;
 import com.main.com.adapter.MyAdapter;
+import com.main.com.model.text;
 import com.skydoves.colorpickerpreference.ColorEnvelope;
 import com.skydoves.colorpickerpreference.ColorListener;
 import com.skydoves.colorpickerpreference.ColorPickerView;
@@ -40,15 +42,15 @@ public class ShareFragment extends WDFragment {
     RelativeLayout relatLayout;
     @BindView(R2.id.text)
     TextView text;
-    @BindView(R2.id.colorView)
-    ColorPickerView colorView;
+
     @BindView(R2.id.text_fenxiang)
     TextView text_fenxiang;
     private PopupWindow popupWindow;
     private RecyclerView recycler;
     List list=new ArrayList();
     private TextView text_zidingyi;
-
+    private ColorPickerView colorView;
+    private  int haha;
     @Override
     public String getPageName() {
         return "***Fragment";
@@ -69,16 +71,6 @@ public class ShareFragment extends WDFragment {
                 popwindon();
             }
         });
-        //取色盘控件
-        colorView.setColorListener(new ColorListener() {
-            @Override
-            public void onColorSelected(ColorEnvelope colorEnvelope) {
-                //给控件填充背景色
-                text.setBackgroundColor(colorEnvelope.getColor());
-                //隐藏取色盘
-                colorView.setVisibility(View.GONE);
-            }
-        });
         //分享
         text_fenxiang.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +80,38 @@ public class ShareFragment extends WDFragment {
             }
         });
 
+
+    }
+
+    private void dialog_color() {
+        View view = LayoutInflater.from(context).inflate(R.layout.dialog_qusepan, null);
+         final AlertDialog dialog = new AlertDialog.Builder(context)
+                .setView(view)
+                .show();
+        view.findViewById(R.id.text_quxiao).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                text.setBackgroundColor(Color.parseColor("#ffffff"));
+                dialog.dismiss();
+            }
+        });
+        //确定
+        view.findViewById(R.id.text_queding).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                text.setBackgroundColor(haha);
+             dialog.dismiss();
+            }
+        });
+        colorView = (ColorPickerView)view.findViewById(R.id.colorView);
+        colorView.setColorListener(new ColorListener() {
+            @Override
+            public void onColorSelected(ColorEnvelope colorEnvelope) {
+                //给控件填充背景色
+                haha=colorEnvelope.getColor();
+
+            }
+        });
 
     }
 
@@ -116,7 +140,7 @@ public class ShareFragment extends WDFragment {
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
         if (!hidden){
-            colorView.setVisibility(View.GONE);
+
         }
     }
 
@@ -143,8 +167,7 @@ public class ShareFragment extends WDFragment {
               @Override
               public void onClick(View view) {
                   popupWindow.dismiss();
-                  ViewUtils.makeToast(context,"打开自定义取色盘",1500);
-                  colorView.setVisibility(View.VISIBLE);
+                  dialog_color();
               }
           });
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(context);

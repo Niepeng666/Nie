@@ -3,7 +3,9 @@
     package="com.main.com">
 
     <application>
-        <activity android:name=".activity.Frist_shoushi_pwdActivity"></activity>
+        <activity android:name=".activity.SaomiaoActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.Frist_shoushi_pwdActivity" />
         <activity android:name=".activity.ChoujiangActivity" />
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.SetActivity" />

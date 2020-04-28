@@ -92,16 +92,11 @@ public class MeFragment extends WDFragment {
             @Override
             public void onClick(View view) {
                 ColorPickerDialog.Builder builder = new ColorPickerDialog.Builder(context, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
-                builder.setTitle("自定义取色器");
-                builder.setPreferenceName("MyColorPickerDialog");
-                builder.setFlagView(new CustomFlag(context, R.layout.layout_flag));
+              //  builder.setFlagView(new CustomFlag(context, R.layout.layout_flag));
                 builder.setPositiveButton("确定", new ColorListener() {
                     @Override
                     public void onColorSelected(ColorEnvelope colorEnvelope) {
-//                        TextView textView = findViewById(R.id.textView);
-//                        textView.setText("#" + colorEnvelope.getHtmlCode());
-//
-//                        LinearLayout linearLayout = findViewById(R.id.linearLayout);
+
                         text_color.setBackgroundColor(colorEnvelope.getColor());
 
                     }

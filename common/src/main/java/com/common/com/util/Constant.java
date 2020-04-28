@@ -6,21 +6,27 @@ package com.common.com.util;
  * qq:2241659414
  */
 public class Constant {
-    //-----------open_login----都不要动我的开放登录变量，谁动谁傻叉-----
+    //-----------open_login---------
     public final static String ACTIVITY_URL_LOGIN = "/login/LoginActivity";
     public final static String ACTIVITY_URL_REGISTER = "/login/RegisterActivity";
     public final static String ACTIVITY_URL_WELCOME = "/login/WelcomeActivity";
 
 
-    //-----------open_login----都不要动我的开放登录变量，谁动谁傻叉-----
+    //-----------open_login---------
 
 
-    //-----------open_main----首页模块随便动，我看提交历史删你库-----
+    //-----------open_main---------
 
     public final static String ACTIVITY_URL_MAIN = "/main/MainActivity";
     public final static String ACTIVITY_URL_ADD_CIRCLE = "/main/AddCircleActivity";
     public final static String ACTIVITY_URL_SET = "/main/SetActivity";
 
-    //-----------open_main----首页模块随便动，我看提交历史删你库-----
+    //-----------open_main---------
 
+
+
+    //版本号
+    public static String VERSION = "1.0.0";
+    //下载地址
+    public static String DOWNLOAD_APK="https://wallet.shctp.com/lly-posp-proxy/jfbqb.apk";
 }

@@ -36,5 +36,21 @@
             android:id="@+id/text_cj"
             android:text="幸运轮盘"
             android:padding="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_sys"
+            android:text="扫一扫"
+            android:padding="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_ewm"
+            android:text="我的二维码"
+            android:padding="10dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView_ewm"/>
     </LinearLayout>
 </LinearLayout>

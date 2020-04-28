@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.pm.PackageManager;
 
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.common.com.util.ViewUtils;
 import com.hjq.permissions.OnPermission;
@@ -154,5 +155,18 @@ public class PermissionsUtils {
         }
 
         return true;
+    }
+    //安装未知来源的应用权限
+    public static boolean INSTALL_PACKAGES(Activity activity) {
+        int checkSelfPermission = ContextCompat.checkSelfPermission(activity,
+                Manifest.permission.REQUEST_INSTALL_PACKAGES);
+        if (checkSelfPermission != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(activity,
+                    new String[]{Manifest.permission.REQUEST_INSTALL_PACKAGES},
+                    25);
+            return false;
+        } else {
+            return true;
+        }
     }
 }
