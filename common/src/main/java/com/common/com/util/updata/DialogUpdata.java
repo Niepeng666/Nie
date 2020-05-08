@@ -26,7 +26,6 @@ import com.common.com.R;
 import com.common.com.util.CommonUtils;
 import com.common.com.util.Constant;
 import com.common.com.util.DeviceUtils;
-import com.common.com.util.LogUtils;
 import com.common.com.util.PermissionsUtils;
 import com.common.com.util.tusi.ViewUtils;
 
@@ -48,7 +47,6 @@ public class DialogUpdata  extends DialogFragment {
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            LogUtils.i(msg.obj + "");
             if (msg.what == 1) {
                 if (pro_bar == null) {
                     return;

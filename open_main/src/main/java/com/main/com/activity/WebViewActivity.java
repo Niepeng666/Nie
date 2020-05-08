@@ -21,7 +21,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.common.com.core.WDActivity;
+import com.common.com.base.WDActivity;
 import com.common.com.util.PaxWebChromeClient;
 import com.main.com.R;
 
@@ -111,11 +111,6 @@ public class WebViewActivity extends WDActivity {
                 finish();
             }
         });
-
-    }
-
-    @Override
-    protected void destoryData() {
 
     }
 

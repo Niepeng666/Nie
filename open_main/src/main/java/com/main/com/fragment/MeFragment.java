@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.common.com.core.WDFragment;
+import com.common.com.base.WDFragment;
 import com.common.com.util.BitmapManage;
 import com.common.com.util.ChooseDialog;
 import com.common.com.util.Constant;
@@ -17,7 +17,7 @@ import com.common.com.util.PermissionsUtils;
 import com.common.com.util.save_picture.Save_tupian;
 import com.main.com.R;
 import com.main.com.R2;
-import java.io.File;
+
 import butterknife.BindView;
 import static android.app.Activity.RESULT_OK;
 
@@ -33,11 +33,6 @@ public class MeFragment extends WDFragment {
     ImageView imageView;
     @BindView(R2.id.text_diao)
     TextView text_diao;
-
-    @Override
-    public String getPageName() {
-        return "我的Fragment";
-    }
 
     @Override
     protected int getLayoutId() {

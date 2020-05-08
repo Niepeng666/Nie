@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.common.com.core.WDFragment;
+import com.common.com.base.WDFragment;
 import com.common.com.util.tusi.ViewUtils;
 import com.main.com.R;
 import com.main.com.R2;
@@ -31,10 +31,6 @@ public class SendFragment extends WDFragment {
     private List<Bb_Bean> list;
     private CheckBox check_Box;
     private boolean zhia=false;
-    @Override
-    public String getPageName() {
-        return "***Fragment";
-    }
 
     @Override
     protected int getLayoutId() {

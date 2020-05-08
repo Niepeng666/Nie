@@ -5,7 +5,7 @@
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <application>
-        <activity android:name=".activity.Tiao2Activity"></activity>
+
         <activity android:name=".activity.Frist_shoushi_pwdActivity" />
         <activity android:name=".activity.ChoujiangActivity" />
         <activity android:name=".activity.MainActivity" />

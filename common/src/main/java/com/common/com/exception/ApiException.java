@@ -1,4 +1,4 @@
-package com.common.com.core.exception;
+package com.common.com.exception;
 
 /**
  * @author 聂俊鹏

@@ -26,7 +26,7 @@ import com.main.com.R;
 import com.main.com.R2;
 import com.main.com.activity.ChoujiangActivity;
 import com.main.com.activity.WebViewActivity;
-import com.common.com.core.WDFragment;
+import com.common.com.base.WDFragment;
 import com.main.com.model.SendMessageCommunitor;
 import com.recker.flybanner.FlyBanner;
 import com.yzq.zxinglibrary.android.CaptureActivity;
@@ -71,11 +71,6 @@ public class HomeFragment extends WDFragment {
     private TextView text_tishi;
     private TextView text_tiao;
     private Controller build;
-
-    @Override
-    public String getPageName() {
-        return "首页Fragment";
-    }
 
     @Override
     protected int getLayoutId() {

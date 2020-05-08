@@ -12,18 +12,11 @@ import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
-import android.graphics.Paint;
 import android.graphics.PixelFormat;
-import android.graphics.PorterDuff.Mode;
-import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
-import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.media.ExifInterface;
 import android.util.Base64;
-
-import com.common.com.util.LogUtil;
-import com.common.com.util.LogUtils;
 
 
 /**
@@ -100,7 +93,6 @@ public class BitmapManage {
 	 */
 	public static String getCompressedImgPath(Context mContext, String imgPath) {
 		File file = new File(imgPath);
-		LogUtils.i("原图文件大小：" + file.length() / 1024 + "kb");
 		int degree = readPictureDegree(imgPath);
 		Bitmap bitmap = null;
 

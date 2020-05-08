@@ -11,7 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.common.com.core.WDActivity;
+import com.common.com.base.WDActivity;
 import com.common.com.util.ActivityManager;
 import com.common.com.util.tusi.ViewUtils;
 import com.main.com.R;
@@ -77,10 +77,6 @@ public class MainActivity extends WDActivity implements RadioGroup.OnCheckedChan
     private void initToolBarAndDrawableLayout() {
     }
 
-    @Override
-    protected void destoryData() {
-
-    }
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         if (checkedId == R.id.home_btn) {

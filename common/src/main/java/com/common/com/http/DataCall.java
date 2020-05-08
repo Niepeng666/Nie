@@ -1,7 +1,7 @@
-package com.common.com.core;
+package com.common.com.http;
 
 
-import com.common.com.core.exception.ApiException;
+import com.common.com.exception.ApiException;
 
 /**
  * @author bianhua`

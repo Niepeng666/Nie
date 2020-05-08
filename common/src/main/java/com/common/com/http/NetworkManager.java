@@ -1,26 +1,12 @@
-package com.common.com.core.http;
+package com.common.com.http;
 
 
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.os.Environment;
-import android.util.Log;
+import com.common.com.base.WDPresenter;
 
-import com.common.com.core.WDPresenter;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
 
-import okhttp3.Cache;
-import okhttp3.Call;
-import okhttp3.Callback;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -63,8 +49,6 @@ public class NetworkManager {
 
         app_retrofit = new Retrofit.Builder()
                 .client(okHttpClient)
-//                .baseUrl("http://169.254.101.220:8080/")//base_url:http+域名
-//                .baseUrl("http://172.17.8.100/small/")//base_url:http+域名
                 .baseUrl("http://mobile.bwstudent.com/small/")//base_url:http+域名
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())//使用Rxjava对回调数据进行处理
                 .addConverterFactory(GsonConverterFactory.create())//响应结果的解析器，包含gson，xml，protobuf

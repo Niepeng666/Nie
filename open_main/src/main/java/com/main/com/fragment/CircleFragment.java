@@ -5,12 +5,11 @@ import android.graphics.Color;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.common.com.core.WDFragment;
+import com.common.com.base.WDFragment;
 import com.common.com.util.riqi.DateSelectPopupWindow;
 import com.main.com.R;
 import com.main.com.R2;
@@ -42,11 +41,6 @@ public class CircleFragment extends WDFragment  {
     final int i=2;
     private DateSelectPopupWindow dateSelectPopupWindow;
     private List<String> mSelectDates;
-
-    @Override
-    public String getPageName() {
-        return "**Fragment";
-    }
 
     @Override
     protected int getLayoutId() {

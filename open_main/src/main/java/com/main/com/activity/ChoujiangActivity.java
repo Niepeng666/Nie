@@ -1,10 +1,9 @@
 package com.main.com.activity;
 
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.common.com.choujiang.LuckyView;
-import com.common.com.core.WDActivity;
+import com.common.com.base.WDActivity;
 import com.main.com.R;
 import com.main.com.R2;
 
@@ -29,11 +28,6 @@ public class ChoujiangActivity extends WDActivity {
                 Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
-
-    }
-
-    @Override
-    protected void destoryData() {
 
     }
 }

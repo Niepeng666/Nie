@@ -15,7 +15,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.common.com.core.WDFragment;
+import com.common.com.base.WDFragment;
 import com.common.com.util.ChooseDialog;
 import com.common.com.util.tusi.ViewUtils;
 import com.main.com.R;
@@ -52,11 +52,6 @@ public class ShareFragment extends WDFragment {
     TextView change_text;
     @BindView(R2.id.text_num)
     TextView text_num;
-    @Override
-    public String getPageName() {
-        return "***Fragment";
-    }
-
     @Override
     protected int getLayoutId() {
         return R.layout.frag_share;

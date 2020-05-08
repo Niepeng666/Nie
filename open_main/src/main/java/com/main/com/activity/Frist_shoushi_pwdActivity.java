@@ -5,7 +5,7 @@ import android.text.TextUtils;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.common.com.core.WDActivity;
+import com.common.com.base.WDActivity;
 import com.common.com.util.tusi.ViewUtils;
 import com.common.com.util.shoushi.GestureLockViewGroup;
 import com.common.com.util.shoushi.listener.GestureEventListener;
@@ -22,23 +22,19 @@ public class Frist_shoushi_pwdActivity extends WDActivity {
     TextView text_tishi;
     private String inputGesture;
     private boolean isReset = false;
-
     @Override
     protected int getLayoutId() {
         return R.layout.activity_frist_shoushi_pwd;
     }
-
     @Override
     protected void initView() {
         gestureEventListener();
         gesturePasswordSettingListener();
         gestureRetryLimitListener();
     }
-
     private void gestureRetryLimitListener() {
 
     }
-
     private void gesturePasswordSettingListener() {
         shoushimima.setGesturePasswordSettingListener(new GesturePasswordSettingListener() {
             @Override
@@ -97,8 +93,4 @@ public class Frist_shoushi_pwdActivity extends WDActivity {
         finish();
     }
 
-    @Override
-    protected void destoryData() {
-
-    }
 }

@@ -9,7 +9,7 @@ import android.widget.RelativeLayout;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.common.com.core.WDActivity;
+import com.common.com.base.WDActivity;
 import com.common.com.util.Constant;
 import com.common.com.util.DataCleanManager;
 import com.common.com.util.StorageCustomerInfo02Util;
@@ -84,13 +84,6 @@ public class SetActivity extends WDActivity  {
 
             }
         });
-    }
-
-
-
-    @Override
-    protected void destoryData() {
-
     }
 
     @SuppressLint("WrongConstant")
