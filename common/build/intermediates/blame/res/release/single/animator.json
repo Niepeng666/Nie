@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\animator\\design_fab_show_motion_spec.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\animator\\design_fab_show_motion_spec.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\animator\\design_fab_hide_motion_spec.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\animator\\design_fab_hide_motion_spec.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\animator\\mtrl_fab_transformation_sheet_expand_spec.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\animator\\mtrl_fab_transformation_sheet_expand_spec.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\animator\\mtrl_fab_show_motion_spec.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\animator\\mtrl_fab_show_motion_spec.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\animator\\mtrl_fab_transformation_sheet_collapse_spec.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\animator\\mtrl_fab_transformation_sheet_collapse_spec.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\animator\\mtrl_btn_unelevated_state_list_anim.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\animator\\mtrl_btn_unelevated_state_list_anim.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\animator\\mtrl_btn_state_list_anim.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\animator\\mtrl_btn_state_list_anim.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\animator\\mtrl_chip_state_list_anim.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\animator\\mtrl_chip_state_list_anim.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\animator\\mtrl_fab_hide_motion_spec.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\animator\\mtrl_fab_hide_motion_spec.xml"
+    }
+]

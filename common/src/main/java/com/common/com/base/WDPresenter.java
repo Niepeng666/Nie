@@ -23,7 +23,7 @@ public abstract class WDPresenter<T> {
         Class<T> tClass = getTClass();
         iRequest = NetworkManager.instance().create(getRequestType(),tClass);
     }
-    protected abstract Observable getModel(Object... args);
+    protected abstract Observable getModel(Object...args);
 
 
     /**

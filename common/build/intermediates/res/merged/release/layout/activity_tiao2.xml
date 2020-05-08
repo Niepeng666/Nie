@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/fragment_false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.main.com.fragment.MeFragment"
+            tools:layout="@layout/frag_me"/>
+        <com.dlong.rep.dlsidebar.DLSideBar
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:dialogTextBackgroundHeight="100dp"
+            app:dialogTextBackgroundWidth="100dp"
+            app:sideTextColor="@color/colorPrimaryDark"
+            app:sideTextSize="16sp" />
+
+</RelativeLayout>

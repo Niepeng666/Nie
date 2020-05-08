@@ -1,0 +1,454 @@
+[
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\ic_photo.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a5a23d5953a7b125c88a9075192256c7\\res\\drawable\\ic_photo.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\back_camera_btn.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\back_camera_btn.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\scan_light.png",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a5a23d5953a7b125c88a9075192256c7\\res\\drawable\\scan_light.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\rectangle.9.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\rectangle.9.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\common_tab_btn_circle.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\common_tab_btn_circle.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\btn_radio_off_to_on_mtrl_animation.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\btn_radio_off_to_on_mtrl_animation.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\c9cdbb8d6fafa4f9f72970cc19f3b468\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\login_icon_eye_n.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\login_icon_eye_n.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\btn_checkbox_checked_mtrl.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\btn_checkbox_checked_mtrl.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\e42c7fbb83e2f16c400235f202eaa32d\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\tooltip_frame_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\tooltip_frame_light.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\ic_mtrl_chip_checked_black.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\drawable\\ic_mtrl_chip_checked_black.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc01.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\abc01.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\empty.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\empty.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\indicator_normal.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\bc1593ddcf1fe4a7fc30054b2ff4bb16\\res\\drawable\\indicator_normal.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\custom_grid_scan_linegif.gif",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\custom_grid_scan_linegif.gif"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\image_phto.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\image_phto.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\progressloading.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\e77d682f58b2ebf4139aaee482ff4ea4\\res\\drawable\\progressloading.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\indicator_selected.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\bc1593ddcf1fe4a7fc30054b2ff4bb16\\res\\drawable\\indicator_selected.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\navigation_empty_icon.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\drawable\\navigation_empty_icon.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\btn_checkbox_unchecked_mtrl.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\btn_checkbox_unchecked_mtrl.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\custom_grid_scan_line.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\custom_grid_scan_line.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\mtrl_tabs_default_indicator.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\drawable\\mtrl_tabs_default_indicator.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\common_tab_btn_my.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\common_tab_btn_my.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc02.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\abc02.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\progress_style.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\e333a5661eb2d42abd8b397f0fb86fa0\\res\\drawable\\progress_style.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\mini_btn_play.png",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\e333a5661eb2d42abd8b397f0fb86fa0\\res\\drawable\\mini_btn_play.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\button_corners2.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\button_corners2.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\ic_mtrl_chip_close_circle.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\drawable\\ic_mtrl_chip_close_circle.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\my_dialog_bg.9.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\my_dialog_bg.9.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_check_material_anim.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_btn_check_material_anim.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\ic_back.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a5a23d5953a7b125c88a9075192256c7\\res\\drawable\\ic_back.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\ic_mtrl_chip_checked_circle.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\drawable\\ic_mtrl_chip_checked_circle.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\seek_text_bg.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\seek_text_bg.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\btn_radio_on_mtrl.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\btn_radio_on_mtrl.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\c9cdbb8d6fafa4f9f72970cc19f3b468\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\login_bg.jpg",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\login_bg.jpg"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\ic_open.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a5a23d5953a7b125c88a9075192256c7\\res\\drawable\\ic_open.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\wheel.png",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\4a5ecc714d29976743f74d27e07da14a\\res\\drawable\\wheel.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\item_checked.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\item_checked.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\choose1.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\choose1.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\c9cdbb8d6fafa4f9f72970cc19f3b468\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\border_customer_corners.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\border_customer_corners.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\rectangle_top.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\rectangle_top.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\selector_bgabanner_point.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\42135b45d4572b1c5ff1a53916133144\\res\\drawable\\selector_bgabanner_point.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\btn_checkbox_unchecked_to_checked_mtrl_animation.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\btn_checkbox_unchecked_to_checked_mtrl_animation.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\camera_word.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\camera_word.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\progress_bar_ct.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\progress_bar_ct.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\bg2.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\bg2.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\common_tab_btn_list.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\common_tab_btn_list.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\mini_btn_next.png",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\e333a5661eb2d42abd8b397f0fb86fa0\\res\\drawable\\mini_btn_next.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\pg.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\pg.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\sample_footer_loading.png",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\3621042fd65f55695ad8be6555eed783\\res\\drawable\\sample_footer_loading.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\btn_radio_off_mtrl.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\btn_radio_off_mtrl.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\choose.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\choose.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\login_icon_lock_n.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\login_icon_lock_n.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\xcb_black.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\xcb_black.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\flash_camera_btn.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\flash_camera_btn.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\music_icon.png",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\e333a5661eb2d42abd8b397f0fb86fa0\\res\\drawable\\music_icon.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\mydialog_bg.9.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\mydialog_bg.9.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\zhibiao.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\zhibiao.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\palette.png",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\4a5ecc714d29976743f74d27e07da14a\\res\\drawable\\palette.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\mini_btn_pause.png",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\e333a5661eb2d42abd8b397f0fb86fa0\\res\\drawable\\mini_btn_pause.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\c9cdbb8d6fafa4f9f72970cc19f3b468\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\sample_footer_loading_progress.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\3621042fd65f55695ad8be6555eed783\\res\\drawable\\sample_footer_loading_progress.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\xcb1.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\xcb1.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\login_btn_bg.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\login_btn_bg.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\common_tab_btn_home.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\common_tab_btn_home.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\progress_bar_drawable.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\progress_bar_drawable.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\dialog_text_bg.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\6b31c513ffefa8bbea5d25f2a952661c\\res\\drawable\\dialog_text_bg.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\my_button.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\my_button.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\border_customer_corners10.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\border_customer_corners10.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\login_icon_phone_n.png",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\login_icon_phone_n.png"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\btn_checkbox_checked_to_unchecked_mtrl_animation.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\btn_checkbox_checked_to_unchecked_mtrl_animation.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\tooltip_frame_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_radio_material_anim.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_btn_radio_material_anim.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\mtrl_snackbar_background.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a922eef0c6381d4f285a461c807d72a4\\res\\drawable\\mtrl_snackbar_background.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\progress_rotate_style.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\e333a5661eb2d42abd8b397f0fb86fa0\\res\\drawable\\progress_rotate_style.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\toast_bg.xml",
+        "source": "D:\\bianhua\\study_me\\Nie\\common\\src\\main\\res\\drawable\\toast_bg.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\btn_radio_on_to_off_mtrl_animation.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b42abc082fe8de1343f01e57b427650e\\res\\drawable\\btn_radio_on_to_off_mtrl_animation.xml"
+    },
+    {
+        "merged": "D:\\bianhua\\study_me\\Nie\\common\\build\\intermediates\\res\\merged\\release\\drawable\\ic_close.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\a5a23d5953a7b125c88a9075192256c7\\res\\drawable\\ic_close.xml"
+    }
+]
