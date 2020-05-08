@@ -1,8 +1,5 @@
 package com.main.com.fragment;
 
-import android.Manifest;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -13,21 +10,15 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.core.app.ActivityCompat;
-
 import com.common.com.core.WDFragment;
+import com.common.com.util.BitmapManage;
 import com.common.com.util.ChooseDialog;
 import com.common.com.util.Constant;
 import com.common.com.util.PermissionsUtils;
 import com.main.com.R;
 import com.main.com.R2;
-import com.skydoves.colorpickerpreference.ColorEnvelope;
-import com.skydoves.colorpickerpreference.ColorListener;
-import com.skydoves.colorpickerpreference.ColorPickerDialog;
-
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -47,8 +38,6 @@ public class MeFragment extends WDFragment {
     TextView text;
     @BindView(R2.id.imageView)
     ImageView imageView;
-    @BindView(R2.id.text_color)
-    TextView text_color;
     @BindView(R2.id.text_diao)
     TextView text_diao;
 
@@ -85,29 +74,6 @@ public class MeFragment extends WDFragment {
                     return;
                 }
                 initPicture();// 相机、相册
-            }
-        });
-        //自定义取色盘
-        text_color.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ColorPickerDialog.Builder builder = new ColorPickerDialog.Builder(context, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
-              //  builder.setFlagView(new CustomFlag(context, R.layout.layout_flag));
-                builder.setPositiveButton("确定", new ColorListener() {
-                    @Override
-                    public void onColorSelected(ColorEnvelope colorEnvelope) {
-
-                        text_color.setBackgroundColor(colorEnvelope.getColor());
-
-                    }
-                });
-                builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                });
-                builder.show();
             }
         });
         //调用系统的分享

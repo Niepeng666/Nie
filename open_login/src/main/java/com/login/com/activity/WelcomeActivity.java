@@ -66,7 +66,6 @@ public class WelcomeActivity extends WDActivity {
     @Override
     protected int getLayoutId() {
         return R.layout.activity_welcome;
-//        return R2.layout.activity_welcome;
     }
 
     @Override

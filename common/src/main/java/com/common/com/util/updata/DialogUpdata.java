@@ -169,6 +169,7 @@ public class DialogUpdata  extends DialogFragment {
     }
     //下载apk
     private void downFile(String downloadApk) {
+        ViewUtils.makeToast(getActivity(),""+CommonUtils.getConnectedType(context),500);
         if (CommonUtils.getConnectedType(context) == -1) {
             ViewUtils.makeToast(context,
                     "没有可用网络！", 500);
@@ -209,6 +210,7 @@ public class DialogUpdata  extends DialogFragment {
                 PermissionsUtils.INSTALL_PACKAGES(context);//可以安装未知应用的权限
             }
             startActivity(install);
+
         } else {
             Intent install = new Intent(Intent.ACTION_VIEW);
             install.setDataAndType(Uri.fromFile(mFile), "application/vnd.android.package-archive");

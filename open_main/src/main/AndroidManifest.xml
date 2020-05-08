@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
     package="com.main.com">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
     <application>
-        <activity android:name=".activity.SaomiaoActivity"
-            android:screenOrientation="portrait" />
+        <activity android:name=".activity.Tiao2Activity"></activity>
         <activity android:name=".activity.Frist_shoushi_pwdActivity" />
         <activity android:name=".activity.ChoujiangActivity" />
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.SetActivity" />
-        <activity android:name=".activity.AddCircleActivity" />
         <activity android:name=".activity.WebViewActivity" />
     </application>
 

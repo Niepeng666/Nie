@@ -1,5 +1,8 @@
 apply plugin: 'com.android.library'
-apply plugin: 'org.greenrobot.greendao'
+
+
+
+
 android {
     compileSdkVersion projectConfig.compileSdkVersion
     defaultConfig {
@@ -30,11 +33,7 @@ android {
     buildToolsVersion = '28.0.3'
 
 }
-greendao {
-    schemaVersion 1  //版本
-    daoPackage 'com.common.com.db' // 一般为app包名+生成文件的文件夹名
-    targetGenDir 'src/main/java' //生成文件路径
-}
+
 
 
 dependencies {
@@ -64,6 +63,8 @@ dependencies {
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
     implementation files('lib/classes.jar')
     api 'com.henryblue.minimusicview:library:1.0.1'
+    //JSONArray(阿里的)
+    api 'com.alibaba:fastjson:1.2.7'
     //flybanner
     api 'com.recker.flybanner:flybanner:1.3'
     //动态获取权限的依赖
@@ -73,12 +74,23 @@ dependencies {
     //tablayout 控件
     api 'com.android.support:design:26.0.0-alpha1'
     //日历控件
-    api 'com.prolificinteractive:material-calendarview:1.4.0'
+    api 'com.haibin:calendarview:3.6.8'
+    //    api 'com.prolificinteractive:material-calendarview:1.4.0'
     //取色盘
     api 'com.github.skydoves:colorpickerpreference:1.0.2'
-    //手势密码
     //SmartRefreshLayout上下拉刷新
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4'
     //二维码
+    api 'com.github.yuzhiqiang1993:zxing:2.2.5'
+    //adapter库
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.31'
+    //电话薄索引
+    api 'com.github.D10NGYANG:DL10SideBar:1.0.0'
+    //新手指引
+    api 'com.github.huburt-Hu:NewbieGuide:v2.1.0'
+    //识别银行卡
 
-   
+
+
 }

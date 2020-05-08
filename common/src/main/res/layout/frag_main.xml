@@ -10,6 +10,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <com.recker.flybanner.FlyBanner
+            android:paddingBottom="@dimen/dp_10"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:id="@+id/flybanner"/>
@@ -19,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_url"
-            android:text="跳转"
+            android:text="webView跳转"
             android:padding="10dp" />
         <TextView
             android:padding="10dp"
@@ -42,15 +43,33 @@
             android:id="@+id/text_sys"
             android:text="扫一扫"
             android:padding="10dp" />
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@null"
+            android:hint="请输入。。。"/>
+        <View
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:background="#f2f2f2" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_ewm"
-            android:text="我的二维码"
+            android:text="生成我的二维码"
             android:padding="10dp" />
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageView_ewm"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="新手指引"
+                android:id="@+id/text_zhi"/>
+
     </LinearLayout>
 </LinearLayout>

@@ -1,14 +1,17 @@
 package com.main.com.activity;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
 
 import com.common.com.core.WDActivity;
 import com.main.com.R;
 
-public class SaomiaoActivity extends WDActivity {
+public class Tiao2Activity extends WDActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_saomiao;
+        return R.layout.activity_tiao2;
     }
 
     @Override

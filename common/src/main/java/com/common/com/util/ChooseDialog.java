@@ -34,14 +34,6 @@ public class ChooseDialog extends Dialog {
         textTip01.setText(name2);
         textCancle = (TextView) findViewById(R.id.text_cancle);
     }
-
-//    public ChooseDialog setListText(String... text) {
-//        textTip00.setText(text[0]);
-//        textTip01.setText(text[1]);
-//        textCancle.setText(text[2]);
-//        return this;
-//    }
-
     public ChooseDialog setOnChooseDialogListener(final OnChooseDialogListener listener) {
 
         this.listener = listener;
@@ -65,7 +57,6 @@ public class ChooseDialog extends Dialog {
                 }
             }
         });
-
         textTip01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

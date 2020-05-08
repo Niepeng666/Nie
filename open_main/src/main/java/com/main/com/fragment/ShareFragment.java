@@ -2,32 +2,25 @@ package com.main.com.fragment;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
-import android.view.Gravity;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.common.com.core.WDFragment;
 import com.common.com.util.ChooseDialog;
-import com.common.com.util.StorageCustomerInfo02Util;
 import com.common.com.util.ViewUtils;
 import com.main.com.R;
 import com.main.com.R2;
-import com.main.com.adapter.MyAdapter;
-import com.main.com.model.text;
+import com.main.com.activity.MainActivity;
 import com.skydoves.colorpickerpreference.ColorEnvelope;
 import com.skydoves.colorpickerpreference.ColorListener;
 import com.skydoves.colorpickerpreference.ColorPickerView;
@@ -36,13 +29,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import okhttp3.internal.platform.Platform;
 
 public class ShareFragment extends WDFragment {
     @BindView(R2.id.relat_layout)
     RelativeLayout relatLayout;
     @BindView(R2.id.text)
     TextView text;
-
     @BindView(R2.id.text_fenxiang)
     TextView text_fenxiang;
     private PopupWindow popupWindow;
@@ -51,6 +44,15 @@ public class ShareFragment extends WDFragment {
     private TextView text_zidingyi;
     private ColorPickerView colorView;
     private  int haha;
+    private AlertDialog dialog;
+    @BindView(R2.id.text_new_tiao)
+    TextView text_new_tiao;
+    @BindView(R2.id.long_text)
+    TextView long_text;
+    @BindView(R2.id.change_text)
+    TextView change_text;
+    @BindView(R2.id.text_num)
+    TextView text_num;
     @Override
     public String getPageName() {
         return "***Fragment";
@@ -75,17 +77,53 @@ public class ShareFragment extends WDFragment {
         text_fenxiang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 popupWindow01();
+            }
+        });
+
+        //新式跳转
+        text_new_tiao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((MainActivity) getActivity()).skip();
+            }
+        });
+        //收起和展示文章
+
+        change_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Layout layout = long_text.getLayout();
+                int lineCount = layout.getLineCount();
+                if (lineCount<=3 && "更多".equals(change_text.getText().toString().trim())){
+                    long_text.setMaxLines(666);
+                    change_text.setText("收起");
+                }else{
+                    long_text.setMaxLines(3);
+                    change_text.setText("更多");
+                }
+            }
+        });
+
+        //
+        text_num.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            fenxiang();
             }
         });
 
 
     }
 
+    private void fenxiang() {
+
+    }
+
     private void dialog_color() {
         View view = LayoutInflater.from(context).inflate(R.layout.dialog_qusepan, null);
-         final AlertDialog dialog = new AlertDialog.Builder(context)
+         dialog = new AlertDialog.Builder(context)
                 .setView(view)
                 .show();
         view.findViewById(R.id.text_quxiao).setOnClickListener(new View.OnClickListener() {
@@ -116,7 +154,6 @@ public class ShareFragment extends WDFragment {
     }
 
     private void popupWindow01() {
-        ViewUtils.makeToast(context,"弹框了！",500);
         new ChooseDialog(context,"微信分享","QQ分享").setOnChooseDialogListener(new ChooseDialog.OnChooseDialogListener() {
             @Override
             public void onCancle() {
@@ -207,7 +244,25 @@ public class ShareFragment extends WDFragment {
             name.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    text.setText(list.get(position)+"");
+
+                    if (0==position){
+                        text.setTextColor(Color.parseColor("#ff0000"));
+                    }else if (1==position){
+                        text.setTextColor(Color.parseColor("#FF3300"));
+                    }else if (2==position){
+                        text.setTextColor(Color.parseColor("#FFFF33"));
+                    }else if (3==position){
+                        text.setTextColor(Color.parseColor("#66FF00"));
+                    }else if (4==position){
+                        text.setTextColor(Color.parseColor("#33FF99"));
+                    }else if (5==position){
+                        text.setTextColor(Color.parseColor("#00FFFF"));
+                    }else if (6==position){
+                        text.setTextColor(Color.parseColor("#6600CC"));
+                    }else {
+                        text.setTextColor(Color.parseColor("#000000"));
+                    }
+                    popupWindow.dismiss();
                 }
             });
         }
@@ -225,5 +280,6 @@ public class ShareFragment extends WDFragment {
             }
         }
     }
+
 
 }

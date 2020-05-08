@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.os.Environment;
 import android.util.Log;
 
-import com.common.com.util.CommonUtils;
-import com.common.com.util.utils.Constant;
+
+import com.common.com.util.Constant;
 
 import org.json.JSONObject;
 
@@ -13,7 +13,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
@@ -21,8 +20,6 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.Cache;
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.FormBody;
-import okhttp3.Interceptor;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
@@ -49,11 +46,9 @@ public class OkHttp3Util {
      * 提供返回实例的静态方法
      */
     private static OkHttpClient okHttpClient = null;
-
-
     private OkHttp3Util() {
-    }
 
+    }
     public static void callbackException(String url, MyCallback callback, int exceptionCode) {
         switch (exceptionCode) {
             case CALL_EXCEPTION_SOCKET_TIME_OUT:
@@ -70,38 +65,6 @@ public class OkHttp3Util {
                 break;
         }
     }
-
-    /**
-     * post请求
-     * 参数1 url
-     * 参数2 Map<String, String> params post请求的时候给服务器传的数据
-     * add..("","")
-     * add()
-     */
-
-    public static void doPost(String url, TreeMap<String, String> params, OkHttp3Util.MyCallback httpPostCallback) {
-        //要添加的公共参数...map
-        params.put("0", "0700");
-        params.put("59", Constant.VERSION);
-//        params.put("agentNo", Constant.AGENCY_CODE44);
-        params.put("64", getMacData(params));
-        JSONObject json = new JSONObject(params);
-        //创建OkHttpClient请求对象
-        OkHttpClient okHttpClient = getInstance();
-        //3.x版本post请求换成FormBody 封装键值对参数
-
-        MediaType type = MediaType.parse("application/json;charset=utf-8");
-        RequestBody body = RequestBody.create(type, json.toString());
-        //创建Request
-        Request request = new Request.Builder().url(url)
-                .post(body)
-                .build();
-
-        Call call = okHttpClient.newCall(request);
-        call.enqueue(new OkHttpCallback(url, call, httpPostCallback));
-
-    }
-
     public static OkHttpClient getInstance() {
         if (okHttpClient == null) {
             //加同步安全
@@ -115,8 +78,6 @@ public class OkHttp3Util {
                             .connectTimeout(15, TimeUnit.SECONDS)//连接超时
                             .writeTimeout(20, TimeUnit.SECONDS)//写入超时
                             .readTimeout(20, TimeUnit.SECONDS)//读取超时
-                            //.addInterceptor(new CommonParamsInterceptor())//添加的是应用拦截器...公共参数
-                            //.addNetworkInterceptor(new CacheInterceptor())//添加的网络拦截器
                             .cache(new Cache(sdcache.getAbsoluteFile(), cacheSize))//设置缓存
                             .build();
                 }
@@ -140,20 +101,6 @@ public class OkHttp3Util {
             }
         }
     }
-    /**
-     * 根据参数获取签名
-     *
-     * @param parameterMap
-     * @return
-     */
-    public static String getMacData(TreeMap<String, String> parameterMap) {
-        StringBuffer urlBuffer = new StringBuffer();
-        for (String key : parameterMap.keySet()) {
-            urlBuffer.append(parameterMap.get(key));
-        }
-        return CommonUtils.Md5(urlBuffer.toString() + Constant.mainKey);
-    }
-
     /**
      * post请求上传文件....包括图片....流的形式传任意文件...
      * 参数1 url
@@ -198,7 +145,6 @@ public class OkHttp3Util {
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                //com.orhanobut.logger.Logger.e(e.getLocalizedMessage());
                 onDownloadListener.onDownloadFailed(e);
             }
 
@@ -290,39 +236,6 @@ public class OkHttp3Util {
          */
         void onRequestComplete(String url, int code, String response);
     }
-
-    /**
-     * 网络缓存的拦截器......注意在这里更改cache-control头是很危险的,一般客户端不进行更改,,,,服务器端直接指定
-     * <p>
-     * 没网络取缓存的时候,一般都是在数据库或者sharedPerfernce中取出来的
-     */
-    /*private static class CacheInterceptor implements Interceptor{
-
-        @Override
-        public Response intercept(Chain chain) throws IOException {
-            //老的响应
-            Response oldResponse = chain.proceed(chain.request());
-
-            *//*if (NetUtils.isNetworkConnected(DashApplication.getAppContext())){
-                int maxAge = 120; // 在线缓存在2分钟内可读取
-
-                return oldResponse.newBuilder()
-                        .removeHeader("Pragma")
-                        .removeHeader("Cache-Control")
-                        .header("Cache-Control", "public, max-age=" + maxAge)
-                        .build();
-            }else {
-                int maxStale = 60 * 60 * 24 * 14; // 离线时缓存保存2周
-                return oldResponse.newBuilder()
-                        .removeHeader("Pragma")
-                        .removeHeader("Cache-Control")
-                        .header("Cache-Control", "public, only-if-cached, max-stale=" + maxStale)
-                        .build();
-            }*//*
-
-        }
-    }*/
-
     public interface OnDownloadListener {
 
         /**
@@ -342,109 +255,6 @@ public class OkHttp3Util {
         void onDownloadFailed(Exception e);
     }
 
-    /**
-     * 公共参数拦截器
-     */
-    private static class CommonParamsInterceptor implements Interceptor {
 
-        //拦截的方法
-        @Override
-        public Response intercept(Chain chain) throws IOException {
-
-            //获取到请求
-            Request request = chain.request();
-            //获取请求的方式
-            String method = request.method();
-            //获取请求的路径
-            String oldUrl = request.url().toString();
-
-            Log.e("---拦截器", request.url() + "---" + request.method() + "--" + request.header("User-agent"));
-
-            //要添加的公共参数...map
-            Map<String, String> map = new HashMap<>();
-            map.put("version", Constant.VERSION);
-            map.put("sign", Constant.mainKey);
-
-            if ("GET".equals(method)) {
-                // 1.http://www.baoidu.com/login                --------？ key=value&key=value
-                // 2.http://www.baoidu.com/login?               --------- key=value&key=value
-                // 3.http://www.baoidu.com/login?mobile=11111    -----&key=value&key=value
-
-                StringBuilder stringBuilder = new StringBuilder();//创建一个stringBuilder
-
-                stringBuilder.append(oldUrl);
-
-                if (oldUrl.contains("?")) {
-                    //?在最后面....2类型
-                    if (oldUrl.indexOf("?") == oldUrl.length() - 1) {
-
-                    } else {
-                        //3类型...拼接上&
-                        stringBuilder.append("&");
-                    }
-                } else {
-                    //不包含? 属于1类型,,,先拼接上?号
-                    stringBuilder.append("?");
-                }
-
-                //添加公共参数....
-                for (Map.Entry<String, String> entry : map.entrySet()) {
-                    //拼接
-                    stringBuilder.append(entry.getKey())
-                            .append("=")
-                            .append(entry.getValue())
-                            .append("&");
-                }
-
-                //删掉最后一个&符号
-                if (stringBuilder.indexOf("&") != -1) {
-                    stringBuilder.deleteCharAt(stringBuilder.lastIndexOf("&"));
-                }
-
-                String newUrl = stringBuilder.toString();//新的路径
-
-                //拿着新的路径重新构建请求
-                request = request.newBuilder()
-                        .url(newUrl)
-                        .build();
-
-
-            } else if ("POST".equals(method)) {
-                //先获取到老的请求的实体内容
-                RequestBody oldRequestBody = request.body();//....之前的请求参数,,,需要放到新的请求实体内容中去
-
-                //如果请求调用的是上面doPost方法
-                if (oldRequestBody instanceof FormBody) {
-                    FormBody oldBody = (FormBody) oldRequestBody;
-
-                    //构建一个新的请求实体内容
-                    FormBody.Builder builder = new FormBody.Builder();
-                    //1.添加老的参数
-                    for (int i = 0; i < oldBody.size(); i++) {
-                        builder.add(oldBody.name(i), oldBody.value(i));
-                    }
-                    //2.添加公共参数
-                    for (Map.Entry<String, String> entry : map.entrySet()) {
-
-                        builder.add(entry.getKey(), entry.getValue());
-                    }
-
-                    FormBody newBody = builder.build();//新的请求实体内容
-
-                    //构建一个新的请求
-                    request = request.newBuilder()
-                            .url(oldUrl)
-                            .post(newBody)
-                            .build();
-                }
-
-            }
-
-
-            Response response = chain.proceed(request);
-
-            return response;
-        }
-    }
 
 }

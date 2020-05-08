@@ -64,7 +64,6 @@ public class WDApplication extends Application {
         mMainThreadHandler = new Handler();
         mMainLooper = getMainLooper();
         sharedPreferences = getSharedPreferences("share.xml", MODE_PRIVATE);
-
         ARouter.openLog();     // Print log
         ARouter.openDebug();
         ARouter.init(this);//阿里路由初始化
@@ -73,29 +72,7 @@ public class WDApplication extends Application {
 
 
 
-        // 这里实现SDK初始化，appId替换成你的在Bugly平台申请的appId
-        // 调试时，将第三个参数改为true
-       // Bugly.init(this, "900029763", false);
     }
-//    @Override
-//    protected void attachBaseContext(Context base) {
-//        super.attachBaseContext(base);
-//        // you must install multiDex whatever tinker is installed!
-//        MultiDex.install(base);
-//
-//
-//        // 安装tinker
-//        Beta.installTinker();
-//    }
-
- /*   public class SampleApplication extends TinkerApplication {
-        public SampleApplication() {
-            super(ShareConstants.TINKER_ENABLE_ALL, "xxx.xxx.SampleApplicationLike",
-                    "com.tencent.tinker.loader.TinkerLoader", false);
-        }
-    }*/
-
-
     //安装apk
     public static void install(Context context, String filePath,boolean force) {
         File apkFile = new File(filePath);
@@ -142,11 +119,6 @@ public class WDApplication extends Application {
             e.printStackTrace();
         }
     }
-
-
-
-
-
     @Override
     public void onTerminate() {
         super.onTerminate();

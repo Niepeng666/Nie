@@ -17,6 +17,7 @@ import com.common.com.util.DataCleanManager;
 import com.common.com.util.StorageCustomerInfo02Util;
 import com.common.com.util.StorageCustomerInfoUtil;
 import com.common.com.util.ViewUtils;
+import com.google.android.material.tabs.TabLayout;
 import com.main.com.R;
 import com.main.com.R2;
 
@@ -36,7 +37,8 @@ public class SetActivity extends WDActivity  {
     Button clne_btn;
     @BindView(R2.id.shoushi_pwd)
     Button shoushi_pwd;
-
+    @BindView(R2.id.tab_layout)
+    TabLayout tab_layout;
     @Override
     protected int getLayoutId() {
         return R.layout.activity_set;
@@ -64,7 +66,26 @@ public class SetActivity extends WDActivity  {
             }
         });
 
+        tab_layout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                    if (tab.getPosition()==0){
+                        ViewUtils.makeToast(context,"这是左边的",500);
+                    }else if (tab.getPosition()==1){
+                        ViewUtils.makeToast(context,"这是右边的",500);
+                    }
+            }
 
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
     }
 
 

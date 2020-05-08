@@ -1,9 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.login.com" >
-    <application>
+    <application
+        >
         <activity android:name="com.login.com.activity.LoginActivity"
-           android:launchMode="singleTask">
-        </activity>
+           android:launchMode="singleTask"/>
+
         <activity android:name="com.login.com.activity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,66 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
     package="com.nie.com">
     <!-- 8.0 android安装 -->
     <uses-permission android:name="android.REQUEST_INSTALL_PACKAGES.GET_TASKS" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission
         android:name="android.permission.WRITE_SECURE_SETTINGS"
-        tools:ignore="ProtectedPermissions" />
-    <!--网络-->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!--写-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <!--读-->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+        tools:ignore="ProtectedPermissions" /> <!-- 网络 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 写 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <!-- GPS定位权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- GPS定位权限 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-    <!-- SO文件加载 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- SO文件加载 -->
     <uses-permission
         android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <!--获取网络权限-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 获取网络权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:name="com.common.com.core.WDApplication"
         android:allowBackup="true"
         android:icon="@mipmap/bianhua"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/bianhua"
         android:supportsRtl="true"
-        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/AppTheme">
-        <!--全面屏的适配-->
+        <!-- 全面屏的适配 -->
         <meta-data
             android:name="android.max_aspect"
-            android:value="2.4"
+            android:maxAspectRatio="2.4"
             android:resizeableActivity="true"
-            android:maxAspectRatio="2.4"/>
-        <!--适配华为（huawei）刘海屏-->
+            android:value="2.4" /> <!-- 适配华为（huawei）刘海屏 -->
         <meta-data
             android:name="android.notch_support"
-            android:value="true"/>
-        <!--适配小米（xiaomi）刘海屏-->
+            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
         <meta-data
             android:name="notch.config"
             android:value="portrait|landscape" />
@@ -74,7 +60,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
-
     </application>
-        <!--android:windowSoftInputMode="adjustUnspecified|stateHidden"软键盘默认不弹出-->
+
 </manifest>

@@ -3,6 +3,8 @@ package com.main.com.activity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.annotation.SuppressLint;
+import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -11,6 +13,7 @@ import android.widget.Toast;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.common.com.core.WDActivity;
 import com.common.com.util.ActivityManager;
+import com.common.com.util.ViewUtils;
 import com.main.com.R;
 import com.main.com.R2;
 import com.main.com.fragment.CircleFragment;
@@ -20,10 +23,6 @@ import com.main.com.fragment.SendFragment;
 import com.main.com.fragment.ShareFragment;
 import com.main.com.model.SendMessageCommunitor;
 import com.common.com.util.Constant;
-import com.prolificinteractive.materialcalendarview.CalendarDay;
-
-import java.util.Calendar;
-
 import butterknife.BindView;
 
 @Route(path = Constant.ACTIVITY_URL_MAIN)
@@ -48,6 +47,13 @@ public class MainActivity extends WDActivity implements RadioGroup.OnCheckedChan
      ShareFragment shareFragment;
     SendMessageCommunitor sendMessage;
     public static MainActivity instance;
+
+    @SuppressLint("MissingSuperCall")
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        //super.onSaveInstanceState(outState);
+    }
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_main;
@@ -55,6 +61,7 @@ public class MainActivity extends WDActivity implements RadioGroup.OnCheckedChan
     @Override
     protected void initView() {
         instance=this;
+        initToolBarAndDrawableLayout();
         bottomMenu.setOnCheckedChangeListener(this);
         homeFragment = new HomeFragment();
         circleFragment = new CircleFragment();
@@ -66,6 +73,10 @@ public class MainActivity extends WDActivity implements RadioGroup.OnCheckedChan
         tx.add(R.id.container, homeFragment)
                 .show(homeFragment).commit();
     }
+
+    private void initToolBarAndDrawableLayout() {
+    }
+
     @Override
     protected void destoryData() {
 
@@ -131,6 +142,9 @@ public class MainActivity extends WDActivity implements RadioGroup.OnCheckedChan
         }
         return super.onKeyDown(keyCode, event);
 
+    }
+    public void skip(){
+        ViewUtils.makeToast(context,"啧啧,简单的一批！",500);
     }
 
 }

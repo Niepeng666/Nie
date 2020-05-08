@@ -64,7 +64,7 @@ public class BitmapManage {
 
 	
 	//把bitmap转换成String
-	public static String bitmapToString(String filePath,int reqWidth, int reqHeight) {
+	public static String bitmapToString(String filePath, int reqWidth, int reqHeight) {
 
 	        Bitmap bm = getSmallBitmap(filePath,reqWidth,reqHeight);
 	        ByteArrayOutputStream baos = new ByteArrayOutputStream();
