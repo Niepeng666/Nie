@@ -1,21 +1,16 @@
 package com.main.com.fragment;
 
-import android.content.Intent;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.common.com.core.WDFragment;
-import com.common.com.util.ViewUtils;
+import com.common.com.util.tusi.ViewUtils;
 import com.main.com.R;
 import com.main.com.R2;
-import com.main.com.activity.SetActivity;
 import com.main.com.adapter.MyAdapter;
 import com.main.com.model.bean.Bb_Bean;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;

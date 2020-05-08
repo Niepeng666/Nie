@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.common.com.core.WDActivity;
 import com.common.com.util.ActivityManager;
-import com.common.com.util.ViewUtils;
+import com.common.com.util.tusi.ViewUtils;
 import com.main.com.R;
 import com.main.com.R2;
 import com.main.com.fragment.CircleFragment;

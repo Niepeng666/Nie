@@ -3,29 +3,22 @@ package com.main.com.fragment;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.common.com.core.WDFragment;
 import com.common.com.util.BitmapManage;
 import com.common.com.util.ChooseDialog;
 import com.common.com.util.Constant;
 import com.common.com.util.PermissionsUtils;
+import com.common.com.util.save_picture.Save_tupian;
 import com.main.com.R;
 import com.main.com.R2;
-
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
 import butterknife.BindView;
-
 import static android.app.Activity.RESULT_OK;
 
 /**
@@ -122,18 +115,10 @@ public class MeFragment extends WDFragment {
             case 1:
                 if (resultCode == RESULT_OK) {
                     final Bitmap photo = intent.getParcelableExtra("data");
-                    //也可以进行一些保存、压缩等操作后上传  保存
-                    String path = saveImage("userHeader", photo);//两个参数一个是图片名字、一个是图片
-                    File file = new File(path);
                    imageView.setImageBitmap(photo);
-
-                    //上传
-//                    Uri data = intent.getData();
-//                    String image = new BitmapManage().getCompressedImgPath(Next_mainActivity.this, UriToPathUtil.getRealFilePath(Next_mainActivity.this, data));//压缩后的图片
-//                    uploadImage(image);
-
-
-
+                    String Strpicture = BitmapManage.BitmapToString(photo);//把biemap类型的图片转成String类型
+                    Log.e("TAG",photo+"-------"+Strpicture);
+                    Save_tupian.baocun(photo,context);//保存图片
                 }
                 break;
             //调用相册后返回
@@ -141,10 +126,9 @@ public class MeFragment extends WDFragment {
                 if (resultCode == RESULT_OK) {
                     Uri uri = intent.getData();
                     imageView.setImageURI(uri);
-                  //cropPhoto(uri);//裁剪图片
                 }
                 break;
-            //调用剪裁后返回
+
             case 3:
                 Bundle bundle = intent.getExtras();
                 if (bundle != null) {
@@ -152,58 +136,11 @@ public class MeFragment extends WDFragment {
                     Bitmap image = bundle.getParcelable("data");
                     //设置到ImageView上
                     imageView.setImageBitmap(image);
-
-
-                    //也可以进行一些保存、压缩等操作后上传
-                    String path = saveImage("userHeader", image);
-                    File file = new File(path);
-                    /*
-                     *这里可以做上传文件的额操作
-                     */
                 }
                 break;
         }
     }
-    /**
-     * 保存图片到本地
-     *
-     * @param name
-     * @param bmp
-     * @return
-     */
-    public String saveImage(String name, Bitmap bmp) {
-        File appDir = new File(Environment.getExternalStorageDirectory().getPath());
-        Log.e("djkwa",appDir+"");
-        if (!appDir.exists()) {
-            appDir.mkdir();
-        }
-        String fileName = name + ".jpg";
-        File file = new File(appDir, fileName);
-        try {
-            FileOutputStream fos = new FileOutputStream(file);
-            bmp.compress(Bitmap.CompressFormat.JPEG, 100, fos);
-            fos.flush();
-            fos.close();
-            return file.getAbsolutePath();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-    /**
-     * 裁剪图片
-     */
-    private void cropPhoto(Uri uri) {
-        Intent intent = new Intent("com.android.camera.action.CROP");
-        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-        intent.setDataAndType(uri, "image/*");
-        intent.putExtra("crop", "true");
-        intent.putExtra("aspectX", 1);
-        intent.putExtra("aspectY", 1);
-        intent.putExtra("outputX", 300);
-        intent.putExtra("outputY", 300);
-        intent.putExtra("return-data", true);
-        startActivityForResult(intent, 3);
-    }
+
+
+
 }

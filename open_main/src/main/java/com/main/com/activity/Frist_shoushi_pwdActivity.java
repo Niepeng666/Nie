@@ -6,7 +6,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.common.com.core.WDActivity;
-import com.common.com.util.ViewUtils;
+import com.common.com.util.tusi.ViewUtils;
 import com.common.com.util.shoushi.GestureLockViewGroup;
 import com.common.com.util.shoushi.listener.GestureEventListener;
 import com.common.com.util.shoushi.listener.GesturePasswordSettingListener;

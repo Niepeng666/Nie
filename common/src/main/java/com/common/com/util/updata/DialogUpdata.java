@@ -28,7 +28,7 @@ import com.common.com.util.Constant;
 import com.common.com.util.DeviceUtils;
 import com.common.com.util.LogUtils;
 import com.common.com.util.PermissionsUtils;
-import com.common.com.util.ViewUtils;
+import com.common.com.util.tusi.ViewUtils;
 
 import java.io.File;
 

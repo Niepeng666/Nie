@@ -3,15 +3,12 @@ package com.main.com.fragment;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.os.Build;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.app.hubert.guide.NewbieGuide;
 import com.app.hubert.guide.core.Controller;
@@ -19,7 +16,7 @@ import com.app.hubert.guide.listener.OnGuideChangedListener;
 import com.app.hubert.guide.listener.OnLayoutInflatedListener;
 import com.app.hubert.guide.model.GuidePage;
 import com.common.com.util.PermissionsUtils;
-import com.common.com.util.ViewUtils;
+import com.common.com.util.tusi.ViewUtils;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.WriterException;
@@ -28,17 +25,13 @@ import com.google.zxing.qrcode.QRCodeWriter;
 import com.main.com.R;
 import com.main.com.R2;
 import com.main.com.activity.ChoujiangActivity;
-import com.main.com.activity.MainActivity;
 import com.main.com.activity.WebViewActivity;
 import com.common.com.core.WDFragment;
 import com.main.com.model.SendMessageCommunitor;
 import com.recker.flybanner.FlyBanner;
 import com.yzq.zxinglibrary.android.CaptureActivity;
-import com.yzq.zxinglibrary.android.Intents;
 import com.yzq.zxinglibrary.bean.ZxingConfig;
 import com.yzq.zxinglibrary.common.Constant;
-
-import org.json.JSONArray;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -91,8 +84,7 @@ public class HomeFragment extends WDFragment {
 
     @Override
     protected void initView() {
-        //沉浸式状态栏
-      //  ImmersionBar.with(this).barAlpha(0.1f).init();
+
 
       ArrayList<Integer> listBanner=new ArrayList();
         listBanner.add(R.drawable.abc01);

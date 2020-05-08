@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.common.com.core.WDFragment;
 import com.common.com.util.ChooseDialog;
-import com.common.com.util.ViewUtils;
+import com.common.com.util.tusi.ViewUtils;
 import com.main.com.R;
 import com.main.com.R2;
 import com.main.com.activity.MainActivity;
@@ -29,7 +29,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import okhttp3.internal.platform.Platform;
 
 public class ShareFragment extends WDFragment {
     @BindView(R2.id.relat_layout)

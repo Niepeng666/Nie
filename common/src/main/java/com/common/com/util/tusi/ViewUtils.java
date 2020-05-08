@@ -1,4 +1,4 @@
-package com.common.com.util;
+package com.common.com.util.tusi;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.common.com.R;
+import com.common.com.util.ActivityManager;
 import com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar;
 
 import java.util.Timer;
@@ -26,10 +27,6 @@ import java.util.TimerTask;
 public class ViewUtils {
     /**
      * 自定义吐司
-     *
-     * @param context  上下文
-     * @param text     吐司内容
-     * @param duration 显示时长
      */
     public static void makeToast01(Context context, String text, int duration) {
         Toast result = new Toast(context);
